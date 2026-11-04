@@ -31,9 +31,7 @@ def test_absent_signal_with_a_question_is_accepted() -> None:
     assert signal.question == "Which issue is this for?"
 
 
-@pytest.mark.parametrize(
-    "outcome", [Outcome.PRESENT, Outcome.NOT_APPLICABLE, Outcome.UNKNOWN]
-)
+@pytest.mark.parametrize("outcome", [Outcome.PRESENT, Outcome.NOT_APPLICABLE, Outcome.UNKNOWN])
 def test_question_is_rejected_on_a_non_absent_signal(outcome: Outcome) -> None:
     with pytest.raises(ValueError, match="only on an ABSENT signal"):
         Signal("R1", "issue link", outcome, "detail", "Why?")
