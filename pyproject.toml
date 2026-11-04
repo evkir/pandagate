@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pandagate"
+version = "0.0.1"
+description = "Gate incoming pull requests on contribution evidence - tests, repro steps, issue linkage."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+authors = [{ name = "Evgeny Kiryak", email = "evgeny@maseclab.com" }]
+keywords = ["github-action", "pull-request", "code-review", "maintainer-tools", "contribution-quality"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3", "ruff>=0.7"]
+
+[project.scripts]
+pandagate = "pandagate.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/evkir/pandagate"
+Issues = "https://github.com/evkir/pandagate/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pandagate"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
