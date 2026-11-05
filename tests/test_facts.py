@@ -74,3 +74,15 @@ def test_changed_file_from_api_tolerates_missing_counts() -> None:
     assert changed.additions == 0
     assert changed.deletions == 0
     assert changed.status == ""
+
+
+def test_pure_rename_is_a_move_with_no_line_changes() -> None:
+    assert ChangedFile("src/b.py", "renamed", 0, 0).is_pure_rename is True
+
+
+def test_rename_that_edits_lines_is_not_pure() -> None:
+    assert ChangedFile("src/b.py", "renamed", 12, 3).is_pure_rename is False
+
+
+def test_modified_file_is_never_a_pure_rename() -> None:
+    assert ChangedFile("src/b.py", "modified", 0, 0).is_pure_rename is False
