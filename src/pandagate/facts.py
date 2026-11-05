@@ -24,6 +24,11 @@ class ChangedFile:
         head, sep, _ = self.path.partition("/")
         return head if sep else ""
 
+    @property
+    def is_pure_rename(self) -> bool:
+        """A move that changed no lines - nothing new to review in it."""
+        return self.status == "renamed" and self.additions == 0 and self.deletions == 0
+
 
 @dataclass(frozen=True, slots=True)
 class PullRequestFacts:

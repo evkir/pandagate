@@ -9,16 +9,11 @@ read a standing ABSENT.
 from collections.abc import Mapping
 from typing import Any
 
-from pandagate.facts import ChangedFile, PullRequestFacts
+from pandagate.facts import PullRequestFacts
 from pandagate.paths import PathKind, classify
 from pandagate.rules.base import Outcome, Signal
 
 DEFAULT_MIN_LOGIC_LINES = 5
-
-
-def is_pure_rename(changed: ChangedFile) -> bool:
-    """A move that changed no lines - nothing new to cover with a test."""
-    return changed.status == "renamed" and changed.additions == 0 and changed.deletions == 0
 
 
 class TestsWithCodeRule:
@@ -37,7 +32,7 @@ class TestsWithCodeRule:
             )
 
         minimum = int(options.get("min_logic_lines", DEFAULT_MIN_LOGIC_LINES))
-        substantive = [f for f in facts.changed_files if not is_pure_rename(f)]
+        substantive = [f for f in facts.changed_files if not f.is_pure_rename]
         logic = [f for f in substantive if classify(f.path) is PathKind.LOGIC]
 
         if not logic:
