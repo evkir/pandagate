@@ -1,5 +1,7 @@
 # PandaGate
 
+[![CI](https://github.com/evkir/pandagate/actions/workflows/ci.yml/badge.svg)](https://github.com/evkir/pandagate/actions/workflows/ci.yml)
+
 Gate incoming pull requests on **contribution evidence**, not on guesses
 about who or what wrote them.
 
