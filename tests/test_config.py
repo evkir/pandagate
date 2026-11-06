@@ -2,7 +2,15 @@
 
 import pytest
 
-from pandagate.config import Config, ConfigError, Mode, parse_config
+from pandagate.config import (
+    CONFIG_FILENAME,
+    MAX_CONFIG_BYTES,
+    Config,
+    ConfigError,
+    Mode,
+    load_config,
+    parse_config,
+)
 
 
 def test_empty_text_gives_defaults():
@@ -96,3 +104,52 @@ def test_a_named_rule_list_is_exhaustive():
 def test_mode_off_disables_every_rule():
     config = parse_config('mode = "off"\nenabled_rules = ["R1"]')
     assert not config.is_enabled("R1")
+
+
+def _write(tmp_path, data):
+    path = tmp_path / CONFIG_FILENAME
+    path.write_bytes(data)
+    return path
+
+
+def test_an_absent_file_gives_defaults(tmp_path):
+    config = load_config(tmp_path / CONFIG_FILENAME)
+    assert config == Config()
+
+
+def test_an_empty_file_gives_defaults(tmp_path):
+    assert load_config(_write(tmp_path, b"")) == Config()
+
+
+def test_a_file_is_parsed(tmp_path):
+    path = _write(tmp_path, b'mode = "off"\n[rules.R1]\nrequire_closing_keyword = true\n')
+    config = load_config(path)
+    assert config.mode is Mode.OFF
+    assert config.options_for("R1") == {"require_closing_keyword": True}
+
+
+def test_utf8_content_survives_the_round_trip(tmp_path):
+    path = _write(tmp_path, 'enabled_rules = ["Ромб"]\n'.encode())
+    assert load_config(path).enabled_rules == ("Ромб",)
+
+
+def test_an_oversized_file_is_refused_by_size(tmp_path):
+    path = _write(tmp_path, b"# " + b"x" * MAX_CONFIG_BYTES)
+    with pytest.raises(ConfigError, match="refusing to read"):
+        load_config(path)
+
+
+def test_a_file_at_the_size_limit_is_read(tmp_path):
+    padding = b"# " + b"x" * (MAX_CONFIG_BYTES - 2)
+    assert load_config(_write(tmp_path, padding)) == Config()
+
+
+def test_a_file_that_is_not_utf8_is_rejected(tmp_path):
+    with pytest.raises(ConfigError, match="UTF-8"):
+        load_config(_write(tmp_path, b'mode = "\xff\xfe"'))
+
+
+def test_a_directory_in_place_of_the_file_is_an_error(tmp_path):
+    (tmp_path / CONFIG_FILENAME).mkdir()
+    with pytest.raises(ConfigError, match="cannot be read"):
+        load_config(tmp_path / CONFIG_FILENAME)

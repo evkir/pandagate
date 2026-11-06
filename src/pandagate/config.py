@@ -13,9 +13,14 @@ import tomllib
 from collections.abc import Mapping
 from dataclasses import dataclass, field
 from enum import StrEnum
+from pathlib import Path
 from typing import Any
 
 CONFIG_FILENAME = ".pandagate.toml"
+
+#: A configuration file past this size is a mistake or an attack, not a
+#: configuration, and is refused before it is read into memory.
+MAX_CONFIG_BYTES = 64 * 1024
 
 
 class ConfigError(ValueError):
@@ -123,3 +128,34 @@ def _read_rule_options(raw: Mapping[str, Any]) -> dict[str, dict[str, Any]]:
             raise ConfigError(f"rules.{rule_id}: expected a table of options")
         options[rule_id] = dict(entry)
     return options
+
+
+def load_config(path: Path) -> Config:
+    """Read configuration from a file, falling back to defaults when absent.
+
+    The absent file is the ordinary case: a repository that has never
+    configured anything gets every rule at its default thresholds.
+
+    The path must point into a checkout of the base branch. Reading it
+    from the pull request's own head would let a contributor disable the
+    rules that read their contribution.
+    """
+    try:
+        size = path.stat().st_size
+    except FileNotFoundError:
+        return Config()
+    except OSError as exc:
+        raise ConfigError(f"{path.name}: cannot be read: {exc}") from exc
+
+    if size > MAX_CONFIG_BYTES:
+        raise ConfigError(f"{path.name}: larger than {MAX_CONFIG_BYTES} bytes, refusing to read")
+
+    try:
+        raw = path.read_bytes()
+    except OSError as exc:
+        raise ConfigError(f"{path.name}: cannot be read: {exc}") from exc
+
+    try:
+        return parse_config(raw.decode("utf-8"))
+    except UnicodeDecodeError as exc:
+        raise ConfigError(f"{path.name}: not valid UTF-8") from exc
