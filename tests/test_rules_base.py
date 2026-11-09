@@ -52,3 +52,13 @@ def test_registry_returns_a_copy() -> None:
     snapshot = registry()
     snapshot["injected"] = _StubRule()
     assert "injected" not in registry()
+
+
+def test_the_registry_is_restored_between_tests() -> None:
+    """Companion to the duplicate test above: both register the same id.
+
+    Either one passes alone. They pass together only while each test gets
+    its own copy of the registry.
+    """
+    register(_StubRule())
+    assert registry()["R0"].title == "stub"

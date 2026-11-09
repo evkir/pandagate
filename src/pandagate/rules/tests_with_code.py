@@ -11,7 +11,7 @@ from typing import Any
 
 from pandagate.facts import PullRequestFacts
 from pandagate.paths import PathKind, classify
-from pandagate.rules.base import Outcome, Signal
+from pandagate.rules.base import Outcome, Signal, register
 
 DEFAULT_MIN_LOGIC_LINES = 5
 
@@ -67,4 +67,4 @@ class TestsWithCodeRule:
         )
 
 
-RULE = TestsWithCodeRule()
+RULE = register(TestsWithCodeRule())

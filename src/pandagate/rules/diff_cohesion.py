@@ -17,7 +17,7 @@ from typing import Any
 
 from pandagate.facts import ChangedFile, PullRequestFacts
 from pandagate.paths import PathKind, classify
-from pandagate.rules.base import Outcome, Signal
+from pandagate.rules.base import Outcome, Signal, register
 
 DEFAULT_MAX_AREAS = 3
 DEFAULT_AREA_DEPTH = 2
@@ -85,4 +85,4 @@ class DiffCohesionRule:
         )
 
 
-RULE = DiffCohesionRule()
+RULE = register(DiffCohesionRule())
