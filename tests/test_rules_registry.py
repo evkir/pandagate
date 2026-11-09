@@ -35,3 +35,18 @@ def test_no_rule_module_is_left_out_of_the_package() -> None:
     on_disk = {p.stem for p in directory.glob("*.py")} - {"__init__", "base"}
     imported = {type(rule).__module__.rsplit(".", 1)[-1] for rule in registry().values()}
     assert on_disk == imported
+
+
+#: Identifiers that have been released. A rule identifier appears in the
+#: .pandagate.toml of every repository that configures it, so renaming one
+#: silently breaks a configuration that is not in this repository. Add to
+#: this set when a rule ships; change it only in a release that says so.
+PUBLISHED_IDENTIFIERS = frozenset({"R1", "R2", "R3"})
+
+
+def test_published_identifiers_are_still_registered() -> None:
+    assert set(registry()) >= PUBLISHED_IDENTIFIERS
+
+
+def test_a_new_rule_is_added_to_the_published_set() -> None:
+    assert set(registry()) <= PUBLISHED_IDENTIFIERS
