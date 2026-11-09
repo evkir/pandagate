@@ -9,7 +9,7 @@ from collections.abc import Mapping
 from typing import Any
 
 from pandagate.facts import PullRequestFacts
-from pandagate.rules.base import Outcome, Signal
+from pandagate.rules.base import Outcome, Signal, register
 
 MAINTAINER_ASSOCIATIONS = frozenset({"OWNER", "MEMBER", "COLLABORATOR"})
 
@@ -95,4 +95,4 @@ class IssueLinkRule:
         )
 
 
-RULE = IssueLinkRule()
+RULE = register(IssueLinkRule())
