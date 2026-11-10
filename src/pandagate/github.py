@@ -1,6 +1,7 @@
 """Reading one pull request from the GitHub REST API.
 
-Everything here is a read. The token is sent to one host only, and a
+Reads go through here, and so does the one thing the action writes: its
+own comment. The token is sent to one host only, and a
 redirect is refused instead of followed: following it would hand the
 token to wherever the redirect points.
 
@@ -14,9 +15,9 @@ import re
 import urllib.error
 import urllib.parse
 import urllib.request
-from collections.abc import Callable, Mapping
+from collections.abc import Mapping
 from dataclasses import dataclass
-from typing import Any
+from typing import Any, Protocol
 
 from pandagate import __version__
 from pandagate.config import CONFIG_FILENAME, MAX_CONFIG_BYTES, Config, ConfigError, parse_config
@@ -30,6 +31,9 @@ PER_PAGE = 100
 
 #: The files endpoint lists at most 3000 files, which is this many pages.
 MAX_FILE_PAGES = 30
+
+#: Comment pages read when looking for the comment written earlier.
+MAX_COMMENT_PAGES = 10
 
 MAX_RESPONSE_BYTES = 8 * 1024 * 1024
 TIMEOUT_SECONDS = 20
@@ -62,7 +66,16 @@ class Response:
     body: bytes
 
 
-Transport = Callable[[str, Mapping[str, str]], Response]
+class Transport(Protocol):
+    """Sends one request and returns the status and body of the answer."""
+
+    def __call__(
+        self,
+        url: str,
+        headers: Mapping[str, str],
+        method: str = "GET",
+        body: bytes | None = None,
+    ) -> Response: ...
 
 
 @dataclass(frozen=True, slots=True)
@@ -123,9 +136,14 @@ def _read_limited(reply: Any) -> bytes:
     return data
 
 
-def urllib_transport(url: str, headers: Mapping[str, str]) -> Response:
-    """Send one GET request with the standard library."""
-    request = urllib.request.Request(url, headers=dict(headers), method="GET")
+def urllib_transport(
+    url: str,
+    headers: Mapping[str, str],
+    method: str = "GET",
+    body: bytes | None = None,
+) -> Response:
+    """Send one request with the standard library."""
+    request = urllib.request.Request(url, data=body, headers=dict(headers), method=method)
     try:
         with _OPENER.open(request, timeout=TIMEOUT_SECONDS) as reply:
             return Response(reply.status, _read_limited(reply))
@@ -136,8 +154,8 @@ def urllib_transport(url: str, headers: Mapping[str, str]) -> Response:
         raise GitHubError(f"could not reach {API_ROOT}: {type(exc).__name__}") from exc
 
 
-def _expect_ok(response: Response, what: str) -> None:
-    if response.status == 200:
+def _expect_ok(response: Response, what: str, expected: int = 200) -> None:
+    if response.status == expected:
         return
     if 300 <= response.status < 400:
         hint = "redirects are not followed; the repository may have been renamed"
@@ -161,7 +179,7 @@ def _repository_path(ref: PullRequestRef) -> str:
 
 
 class Client:
-    """Read-only access to one host of the GitHub REST API."""
+    """Access to one host of the GitHub REST API."""
 
     def __init__(self, token: str | None = None, transport: Transport = urllib_transport) -> None:
         if token and not _TOKEN.fullmatch(token):
@@ -169,11 +187,13 @@ class Client:
         self._token = token or None
         self._transport = transport
 
-    def _get(
+    def _send(
         self,
         path: str,
         query: Mapping[str, str] | None = None,
         accept: str = _JSON,
+        method: str = "GET",
+        payload: Mapping[str, Any] | None = None,
     ) -> Response:
         url = API_ROOT + path
         if query:
@@ -185,12 +205,16 @@ class Client:
         }
         if self._token:
             headers["Authorization"] = f"Bearer {self._token}"
-        return self._transport(url, headers)
+        data = None
+        if payload is not None:
+            headers["Content-Type"] = "application/json"
+            data = json.dumps(payload).encode()
+        return self._transport(url, headers, method, data)
 
     def pull_request(self, ref: PullRequestRef) -> Mapping[str, Any]:
         """The pull request object as the API reports it."""
         what = f"pull request {ref.slug}#{ref.number}"
-        response = self._get(f"{_repository_path(ref)}/pulls/{ref.number}")
+        response = self._send(f"{_repository_path(ref)}/pulls/{ref.number}")
         _expect_ok(response, what)
         payload = _json(response, what)
         if not isinstance(payload, dict):
@@ -204,7 +228,7 @@ class Client:
         entries: list[Mapping[str, Any]] = []
         incomplete = False
         for page in range(1, MAX_FILE_PAGES + 1):
-            response = self._get(path, {"per_page": str(PER_PAGE), "page": str(page)})
+            response = self._send(path, {"per_page": str(PER_PAGE), "page": str(page)})
             _expect_ok(response, what)
             batch = _json(response, what)
             if not isinstance(batch, list):
@@ -225,7 +249,7 @@ class Client:
         """
         what = f"{CONFIG_FILENAME} of {ref.slug}"
         path = f"{_repository_path(ref)}/contents/{CONFIG_FILENAME}"
-        response = self._get(path, {"ref": base_ref}, accept=_RAW)
+        response = self._send(path, {"ref": base_ref}, accept=_RAW)
         if response.status == 404:
             return Config()
         _expect_ok(response, what)
@@ -236,6 +260,54 @@ class Client:
         except UnicodeDecodeError:
             raise ConfigError(f"{CONFIG_FILENAME}: not valid UTF-8") from None
         return parse_config(text)
+
+    def identity(self) -> str | None:
+        """The login the token acts as, or None when the API will not say."""
+        response = self._send("/user")
+        if response.status != 200:
+            return None
+        payload = _json(response, "the identity of the token")
+        login = payload.get("login") if isinstance(payload, dict) else None
+        return login if isinstance(login, str) and login else None
+
+    def comments(self, ref: PullRequestRef) -> list[Mapping[str, Any]]:
+        """The comments on the pull request, oldest first.
+
+        Reading stops after a fixed number of pages. The comment this
+        action looks for is written when the pull request is first seen,
+        so it sits near the start of the list.
+        """
+        what = f"comments of {ref.slug}#{ref.number}"
+        path = f"{_repository_path(ref)}/issues/{ref.number}/comments"
+        entries: list[Mapping[str, Any]] = []
+        for page in range(1, MAX_COMMENT_PAGES + 1):
+            response = self._send(path, {"per_page": str(PER_PAGE), "page": str(page)})
+            _expect_ok(response, what)
+            batch = _json(response, what)
+            if not isinstance(batch, list):
+                raise GitHubError(f"{what}: the response was not a list")
+            entries.extend(entry for entry in batch if isinstance(entry, dict))
+            if len(batch) < PER_PAGE:
+                break
+        return entries
+
+    def create_comment(self, ref: PullRequestRef, body: str) -> None:
+        """Post a new comment on the pull request."""
+        path = f"{_repository_path(ref)}/issues/{ref.number}/comments"
+        response = self._send(path, method="POST", payload={"body": body})
+        _expect_ok(response, f"posting a comment on {ref.slug}#{ref.number}", 201)
+
+    def update_comment(self, ref: PullRequestRef, comment_id: int, body: str) -> None:
+        """Replace the text of one comment."""
+        path = f"{_repository_path(ref)}/issues/comments/{int(comment_id)}"
+        response = self._send(path, method="PATCH", payload={"body": body})
+        _expect_ok(response, f"updating a comment on {ref.slug}#{ref.number}")
+
+    def delete_comment(self, ref: PullRequestRef, comment_id: int) -> None:
+        """Remove one comment."""
+        path = f"{_repository_path(ref)}/issues/comments/{int(comment_id)}"
+        response = self._send(path, method="DELETE")
+        _expect_ok(response, f"removing a comment on {ref.slug}#{ref.number}", 204)
 
 
 def _base_ref(payload: Mapping[str, Any]) -> str:

@@ -29,7 +29,7 @@ class FakeTransport:
         self.table = table
         self.calls: list[tuple[str, dict[str, str]]] = []
 
-    def __call__(self, url: str, headers: Mapping[str, str]) -> Response:
+    def __call__(self, url: str, headers: Mapping[str, str], *_: Any) -> Response:
         self.calls.append((url, dict(headers)))
         return self.table.get(url, Response(404, b""))
 
