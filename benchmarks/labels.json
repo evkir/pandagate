@@ -192,6 +192,90 @@
       "rule_id": "R1",
       "verdict": "correct",
       "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/tokio-rs/tokio/pull/8521",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/tokio-rs/tokio/pull/8511",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/tokio-rs/tokio/pull/8511",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/tokio-rs/tokio/pull/8505",
+      "rule_id": "R2",
+      "verdict": "wrong",
+      "reason": "inline-tests: #[test] added in two files under tokio/src/runtime/io"
+    },
+    {
+      "url": "https://github.com/tokio-rs/tokio/pull/8500",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/tokio-rs/tokio/pull/8499",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/tokio-rs/tokio/pull/8497",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/tokio-rs/tokio/pull/8496",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/tokio-rs/tokio/pull/8496",
+      "rule_id": "R2",
+      "verdict": "wrong",
+      "reason": "inline-tests: #[test] added in tokio/src/runtime/metrics/histogram/h2_histogram.rs"
+    },
+    {
+      "url": "https://github.com/tokio-rs/tokio/pull/8495",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/tokio-rs/tokio/pull/8495",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/tokio-rs/tokio/pull/8494",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/tokio-rs/tokio/pull/8488",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/tokio-rs/tokio/pull/8486",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
     }
   ]
 }
