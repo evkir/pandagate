@@ -522,6 +522,78 @@
       "rule_id": "R1",
       "verdict": "correct",
       "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/neovim/neovim/pull/42186",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/neovim/neovim/pull/42184",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/neovim/neovim/pull/42183",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/neovim/neovim/pull/42136",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/neovim/neovim/pull/42121",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/neovim/neovim/pull/42121",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/neovim/neovim/pull/42117",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/neovim/neovim/pull/42065",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/neovim/neovim/pull/42065",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/neovim/neovim/pull/42028",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/neovim/neovim/pull/42017",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/neovim/neovim/pull/42017",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
     }
   ]
 }
