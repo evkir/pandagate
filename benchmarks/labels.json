@@ -1,0 +1,47 @@
+{
+  "pandagate_commit": "796b735c3b387874fe8e40ec7da0f1f17cc77003",
+  "labels": [
+    {
+      "url": "https://github.com/pytest-dev/pytest/pull/15058",
+      "rule_id": "R2",
+      "verdict": "wrong",
+      "reason": "tests-dir: testing/python/fixtures.py adds 6 test functions"
+    },
+    {
+      "url": "https://github.com/pytest-dev/pytest/pull/14977",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/pytest-dev/pytest/pull/14967",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/pytest-dev/pytest/pull/14934",
+      "rule_id": "R2",
+      "verdict": "wrong",
+      "reason": "tests-dir: testing/python/approx.py adds a test function"
+    },
+    {
+      "url": "https://github.com/pandas-dev/pandas/pull/69985",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/pandas-dev/pandas/pull/69916",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/pandas-dev/pandas/pull/69480",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    }
+  ]
+}
