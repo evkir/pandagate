@@ -1,0 +1,33 @@
+name: PandaGate
+description: Reports observable facts about an incoming pull request and asks the maintainer's questions in one comment.
+author: evkir
+branding:
+  icon: message-circle
+  color: gray-dark
+
+inputs:
+  token:
+    description: Token that reads the pull request and writes the comment.
+    required: false
+    default: ${{ github.token }}
+
+runs:
+  using: composite
+  steps:
+    - name: Report on the pull request
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.token }}
+        PANDAGATE_PULL_REQUEST_URL: ${{ github.event.pull_request.html_url }}
+        PYTHONDONTWRITEBYTECODE: "1"
+      run: |
+        if [ -z "$PANDAGATE_PULL_REQUEST_URL" ]; then
+          echo "::error::PandaGate runs on pull request events and this run carries no pull request."
+          exit 1
+        fi
+        cd "$GITHUB_ACTION_PATH/src"
+        if ! python3 -c 'import sys; sys.exit(sys.version_info < (3, 12))'; then
+          echo "::error::PandaGate needs Python 3.12 or newer as python3 on the runner."
+          exit 1
+        fi
+        python3 -m pandagate check --post "$PANDAGATE_PULL_REQUEST_URL"
