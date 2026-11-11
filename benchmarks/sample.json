@@ -1,0 +1,1658 @@
+{
+  "cutoff": "2026-10-01T00:00:00Z",
+  "taken_at": "2026-11-11T08:39:04Z",
+  "repositories": [
+    {
+      "repository": "pytest-dev/pytest",
+      "scanned": 165,
+      "picked": 20
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "scanned": 159,
+      "picked": 20
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "scanned": 96,
+      "picked": 20
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "scanned": 34,
+      "picked": 20
+    },
+    {
+      "repository": "vitejs/vite",
+      "scanned": 66,
+      "picked": 20
+    },
+    {
+      "repository": "withastro/astro",
+      "scanned": 98,
+      "picked": 20
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "scanned": 50,
+      "picked": 20
+    },
+    {
+      "repository": "cli/cli",
+      "scanned": 258,
+      "picked": 20
+    },
+    {
+      "repository": "neovim/neovim",
+      "scanned": 114,
+      "picked": 20
+    },
+    {
+      "repository": "godotengine/godot",
+      "scanned": 52,
+      "picked": 20
+    }
+  ],
+  "pull_requests": [
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 15058,
+      "url": "https://github.com/pytest-dev/pytest/pull/15058",
+      "created_at": "2026-09-17T22:53:26Z",
+      "merged_at": "2026-10-06T19:32:32Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 15044,
+      "url": "https://github.com/pytest-dev/pytest/pull/15044",
+      "created_at": "2026-09-16T23:16:24Z",
+      "merged_at": "2026-09-18T06:25:34Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 15040,
+      "url": "https://github.com/pytest-dev/pytest/pull/15040",
+      "created_at": "2026-09-16T10:59:18Z",
+      "merged_at": "2026-10-10T09:11:45Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 15034,
+      "url": "https://github.com/pytest-dev/pytest/pull/15034",
+      "created_at": "2026-09-16T07:06:23Z",
+      "merged_at": "2026-10-10T09:12:21Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 15033,
+      "url": "https://github.com/pytest-dev/pytest/pull/15033",
+      "created_at": "2026-09-16T05:53:37Z",
+      "merged_at": "2026-09-23T07:29:42Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 14989,
+      "url": "https://github.com/pytest-dev/pytest/pull/14989",
+      "created_at": "2026-09-08T06:07:00Z",
+      "merged_at": "2026-09-16T05:50:51Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 14977,
+      "url": "https://github.com/pytest-dev/pytest/pull/14977",
+      "created_at": "2026-09-06T08:43:52Z",
+      "merged_at": "2026-09-06T11:49:03Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 14969,
+      "url": "https://github.com/pytest-dev/pytest/pull/14969",
+      "created_at": "2026-09-04T10:10:28Z",
+      "merged_at": "2026-09-07T19:44:32Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 14967,
+      "url": "https://github.com/pytest-dev/pytest/pull/14967",
+      "created_at": "2026-09-03T13:51:19Z",
+      "merged_at": "2026-09-05T18:28:39Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 14954,
+      "url": "https://github.com/pytest-dev/pytest/pull/14954",
+      "created_at": "2026-08-31T01:29:28Z",
+      "merged_at": "2026-09-06T11:45:39Z",
+      "author_association": "NONE"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 14934,
+      "url": "https://github.com/pytest-dev/pytest/pull/14934",
+      "created_at": "2026-08-25T05:45:54Z",
+      "merged_at": "2026-08-25T07:33:32Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 14933,
+      "url": "https://github.com/pytest-dev/pytest/pull/14933",
+      "created_at": "2026-08-24T21:55:20Z",
+      "merged_at": "2026-08-27T19:55:51Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 14931,
+      "url": "https://github.com/pytest-dev/pytest/pull/14931",
+      "created_at": "2026-08-24T10:49:41Z",
+      "merged_at": "2026-10-05T11:38:22Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 14910,
+      "url": "https://github.com/pytest-dev/pytest/pull/14910",
+      "created_at": "2026-08-19T15:45:29Z",
+      "merged_at": "2026-09-07T19:38:55Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 14875,
+      "url": "https://github.com/pytest-dev/pytest/pull/14875",
+      "created_at": "2026-08-13T00:54:45Z",
+      "merged_at": "2026-08-16T11:14:09Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 14845,
+      "url": "https://github.com/pytest-dev/pytest/pull/14845",
+      "created_at": "2026-08-09T06:45:04Z",
+      "merged_at": "2026-08-12T20:38:35Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 14838,
+      "url": "https://github.com/pytest-dev/pytest/pull/14838",
+      "created_at": "2026-08-06T17:27:28Z",
+      "merged_at": "2026-08-23T13:33:25Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 14833,
+      "url": "https://github.com/pytest-dev/pytest/pull/14833",
+      "created_at": "2026-08-04T11:17:47Z",
+      "merged_at": "2026-08-12T19:27:52Z",
+      "author_association": "NONE"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 14829,
+      "url": "https://github.com/pytest-dev/pytest/pull/14829",
+      "created_at": "2026-08-02T15:42:30Z",
+      "merged_at": "2026-08-16T22:10:33Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "number": 14825,
+      "url": "https://github.com/pytest-dev/pytest/pull/14825",
+      "created_at": "2026-08-01T18:42:13Z",
+      "merged_at": "2026-08-05T13:58:23Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69989,
+      "url": "https://github.com/pandas-dev/pandas/pull/69989",
+      "created_at": "2026-09-30T21:55:03Z",
+      "merged_at": "2026-10-13T22:45:41Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69985,
+      "url": "https://github.com/pandas-dev/pandas/pull/69985",
+      "created_at": "2026-09-30T15:19:06Z",
+      "merged_at": "2026-10-07T21:02:16Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69961,
+      "url": "https://github.com/pandas-dev/pandas/pull/69961",
+      "created_at": "2026-09-30T06:47:27Z",
+      "merged_at": "2026-10-06T20:45:50Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69960,
+      "url": "https://github.com/pandas-dev/pandas/pull/69960",
+      "created_at": "2026-09-30T05:17:26Z",
+      "merged_at": "2026-10-13T21:14:03Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69924,
+      "url": "https://github.com/pandas-dev/pandas/pull/69924",
+      "created_at": "2026-09-29T19:55:59Z",
+      "merged_at": "2026-10-11T15:59:12Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69921,
+      "url": "https://github.com/pandas-dev/pandas/pull/69921",
+      "created_at": "2026-09-29T18:03:21Z",
+      "merged_at": "2026-10-09T22:21:00Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69917,
+      "url": "https://github.com/pandas-dev/pandas/pull/69917",
+      "created_at": "2026-09-29T12:34:36Z",
+      "merged_at": "2026-09-30T17:19:47Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69916,
+      "url": "https://github.com/pandas-dev/pandas/pull/69916",
+      "created_at": "2026-09-29T11:33:18Z",
+      "merged_at": "2026-10-13T15:03:15Z",
+      "author_association": "NONE"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69870,
+      "url": "https://github.com/pandas-dev/pandas/pull/69870",
+      "created_at": "2026-09-29T04:28:51Z",
+      "merged_at": "2026-11-04T17:48:05Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69792,
+      "url": "https://github.com/pandas-dev/pandas/pull/69792",
+      "created_at": "2026-09-28T21:30:16Z",
+      "merged_at": "2026-10-01T06:49:05Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69774,
+      "url": "https://github.com/pandas-dev/pandas/pull/69774",
+      "created_at": "2026-09-28T14:49:04Z",
+      "merged_at": "2026-09-28T17:01:38Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69668,
+      "url": "https://github.com/pandas-dev/pandas/pull/69668",
+      "created_at": "2026-09-27T21:06:31Z",
+      "merged_at": "2026-09-29T16:42:53Z",
+      "author_association": "NONE"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69487,
+      "url": "https://github.com/pandas-dev/pandas/pull/69487",
+      "created_at": "2026-09-26T21:29:57Z",
+      "merged_at": "2026-10-17T18:08:09Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69485,
+      "url": "https://github.com/pandas-dev/pandas/pull/69485",
+      "created_at": "2026-09-26T18:54:33Z",
+      "merged_at": "2026-10-13T20:07:16Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69480,
+      "url": "https://github.com/pandas-dev/pandas/pull/69480",
+      "created_at": "2026-09-26T11:02:50Z",
+      "merged_at": "2026-09-27T14:47:09Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69468,
+      "url": "https://github.com/pandas-dev/pandas/pull/69468",
+      "created_at": "2026-09-25T20:13:51Z",
+      "merged_at": "2026-09-26T19:52:09Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69464,
+      "url": "https://github.com/pandas-dev/pandas/pull/69464",
+      "created_at": "2026-09-25T17:29:54Z",
+      "merged_at": "2026-10-27T22:13:49Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69463,
+      "url": "https://github.com/pandas-dev/pandas/pull/69463",
+      "created_at": "2026-09-25T15:48:47Z",
+      "merged_at": "2026-09-28T21:08:09Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69450,
+      "url": "https://github.com/pandas-dev/pandas/pull/69450",
+      "created_at": "2026-09-24T15:20:57Z",
+      "merged_at": "2026-09-27T14:48:34Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "number": 69446,
+      "url": "https://github.com/pandas-dev/pandas/pull/69446",
+      "created_at": "2026-09-24T12:51:22Z",
+      "merged_at": "2026-10-06T20:47:21Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 29026,
+      "url": "https://github.com/astral-sh/ruff/pull/29026",
+      "created_at": "2026-09-30T20:18:20Z",
+      "merged_at": "2026-10-06T15:52:25Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 29019,
+      "url": "https://github.com/astral-sh/ruff/pull/29019",
+      "created_at": "2026-09-30T11:58:38Z",
+      "merged_at": "2026-09-30T12:07:50Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 29018,
+      "url": "https://github.com/astral-sh/ruff/pull/29018",
+      "created_at": "2026-09-30T11:01:53Z",
+      "merged_at": "2026-10-01T14:43:03Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 29015,
+      "url": "https://github.com/astral-sh/ruff/pull/29015",
+      "created_at": "2026-09-30T07:52:36Z",
+      "merged_at": "2026-10-07T04:13:40Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 29014,
+      "url": "https://github.com/astral-sh/ruff/pull/29014",
+      "created_at": "2026-09-30T07:03:43Z",
+      "merged_at": "2026-10-14T18:08:40Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 29001,
+      "url": "https://github.com/astral-sh/ruff/pull/29001",
+      "created_at": "2026-09-30T02:28:24Z",
+      "merged_at": "2026-10-02T14:33:43Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 28999,
+      "url": "https://github.com/astral-sh/ruff/pull/28999",
+      "created_at": "2026-09-29T16:51:22Z",
+      "merged_at": "2026-09-30T02:28:05Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 28997,
+      "url": "https://github.com/astral-sh/ruff/pull/28997",
+      "created_at": "2026-09-29T14:34:10Z",
+      "merged_at": "2026-09-29T17:32:06Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 28981,
+      "url": "https://github.com/astral-sh/ruff/pull/28981",
+      "created_at": "2026-09-28T20:05:09Z",
+      "merged_at": "2026-09-29T13:56:41Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 28980,
+      "url": "https://github.com/astral-sh/ruff/pull/28980",
+      "created_at": "2026-09-28T19:04:47Z",
+      "merged_at": "2026-09-29T04:44:30Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 28978,
+      "url": "https://github.com/astral-sh/ruff/pull/28978",
+      "created_at": "2026-09-28T18:10:21Z",
+      "merged_at": "2026-09-28T18:29:39Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 28959,
+      "url": "https://github.com/astral-sh/ruff/pull/28959",
+      "created_at": "2026-09-28T10:16:13Z",
+      "merged_at": "2026-09-28T12:56:50Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 28941,
+      "url": "https://github.com/astral-sh/ruff/pull/28941",
+      "created_at": "2026-09-27T12:00:49Z",
+      "merged_at": "2026-09-29T13:51:31Z",
+      "author_association": "NONE"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 28923,
+      "url": "https://github.com/astral-sh/ruff/pull/28923",
+      "created_at": "2026-09-26T20:31:00Z",
+      "merged_at": "2026-09-26T21:35:56Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 28921,
+      "url": "https://github.com/astral-sh/ruff/pull/28921",
+      "created_at": "2026-09-26T20:28:12Z",
+      "merged_at": "2026-09-26T20:41:21Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 28912,
+      "url": "https://github.com/astral-sh/ruff/pull/28912",
+      "created_at": "2026-09-25T21:09:59Z",
+      "merged_at": "2026-09-25T21:27:49Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 28911,
+      "url": "https://github.com/astral-sh/ruff/pull/28911",
+      "created_at": "2026-09-25T20:19:28Z",
+      "merged_at": "2026-09-28T11:47:04Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 28910,
+      "url": "https://github.com/astral-sh/ruff/pull/28910",
+      "created_at": "2026-09-25T20:14:10Z",
+      "merged_at": "2026-09-26T06:50:45Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 28907,
+      "url": "https://github.com/astral-sh/ruff/pull/28907",
+      "created_at": "2026-09-25T17:31:07Z",
+      "merged_at": "2026-09-29T13:48:16Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "number": 28906,
+      "url": "https://github.com/astral-sh/ruff/pull/28906",
+      "created_at": "2026-09-25T17:25:58Z",
+      "merged_at": "2026-09-28T08:22:13Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8528,
+      "url": "https://github.com/tokio-rs/tokio/pull/8528",
+      "created_at": "2026-09-29T22:14:43Z",
+      "merged_at": "2026-10-07T06:18:13Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8526,
+      "url": "https://github.com/tokio-rs/tokio/pull/8526",
+      "created_at": "2026-09-29T13:18:29Z",
+      "merged_at": "2026-09-30T05:25:20Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8524,
+      "url": "https://github.com/tokio-rs/tokio/pull/8524",
+      "created_at": "2026-09-29T10:08:23Z",
+      "merged_at": "2026-09-29T10:37:23Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8521,
+      "url": "https://github.com/tokio-rs/tokio/pull/8521",
+      "created_at": "2026-09-28T15:05:53Z",
+      "merged_at": "2026-09-29T05:19:50Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8519,
+      "url": "https://github.com/tokio-rs/tokio/pull/8519",
+      "created_at": "2026-09-28T02:34:09Z",
+      "merged_at": "2026-10-11T08:58:54Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8518,
+      "url": "https://github.com/tokio-rs/tokio/pull/8518",
+      "created_at": "2026-09-27T18:12:28Z",
+      "merged_at": "2026-10-11T07:35:40Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8512,
+      "url": "https://github.com/tokio-rs/tokio/pull/8512",
+      "created_at": "2026-09-25T13:33:35Z",
+      "merged_at": "2026-10-11T08:51:25Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8511,
+      "url": "https://github.com/tokio-rs/tokio/pull/8511",
+      "created_at": "2026-09-25T12:18:32Z",
+      "merged_at": "2026-10-11T11:24:48Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8506,
+      "url": "https://github.com/tokio-rs/tokio/pull/8506",
+      "created_at": "2026-09-24T17:49:47Z",
+      "merged_at": "2026-09-28T15:11:59Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8505,
+      "url": "https://github.com/tokio-rs/tokio/pull/8505",
+      "created_at": "2026-09-24T17:10:50Z",
+      "merged_at": "2026-10-11T13:37:16Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8504,
+      "url": "https://github.com/tokio-rs/tokio/pull/8504",
+      "created_at": "2026-09-24T11:52:16Z",
+      "merged_at": "2026-10-11T13:46:56Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8501,
+      "url": "https://github.com/tokio-rs/tokio/pull/8501",
+      "created_at": "2026-09-22T20:57:50Z",
+      "merged_at": "2026-09-23T05:40:09Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8500,
+      "url": "https://github.com/tokio-rs/tokio/pull/8500",
+      "created_at": "2026-09-22T11:17:17Z",
+      "merged_at": "2026-09-22T20:07:06Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8499,
+      "url": "https://github.com/tokio-rs/tokio/pull/8499",
+      "created_at": "2026-09-22T09:33:52Z",
+      "merged_at": "2026-09-29T10:44:08Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8497,
+      "url": "https://github.com/tokio-rs/tokio/pull/8497",
+      "created_at": "2026-09-21T18:43:01Z",
+      "merged_at": "2026-09-22T08:10:38Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8496,
+      "url": "https://github.com/tokio-rs/tokio/pull/8496",
+      "created_at": "2026-09-21T18:40:26Z",
+      "merged_at": "2026-10-11T08:49:20Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8495,
+      "url": "https://github.com/tokio-rs/tokio/pull/8495",
+      "created_at": "2026-09-21T18:38:21Z",
+      "merged_at": "2026-09-22T18:51:20Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8494,
+      "url": "https://github.com/tokio-rs/tokio/pull/8494",
+      "created_at": "2026-09-20T20:16:03Z",
+      "merged_at": "2026-09-22T07:41:49Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8488,
+      "url": "https://github.com/tokio-rs/tokio/pull/8488",
+      "created_at": "2026-09-16T18:30:33Z",
+      "merged_at": "2026-09-17T09:12:59Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "number": 8486,
+      "url": "https://github.com/tokio-rs/tokio/pull/8486",
+      "created_at": "2026-09-16T09:37:32Z",
+      "merged_at": "2026-09-24T09:14:48Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23614,
+      "url": "https://github.com/vitejs/vite/pull/23614",
+      "created_at": "2026-09-30T06:13:46Z",
+      "merged_at": "2026-10-01T09:34:12Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23611,
+      "url": "https://github.com/vitejs/vite/pull/23611",
+      "created_at": "2026-09-29T13:39:25Z",
+      "merged_at": "2026-09-30T02:50:45Z",
+      "author_association": "NONE"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23609,
+      "url": "https://github.com/vitejs/vite/pull/23609",
+      "created_at": "2026-09-29T07:22:11Z",
+      "merged_at": "2026-09-30T02:31:49Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23600,
+      "url": "https://github.com/vitejs/vite/pull/23600",
+      "created_at": "2026-09-27T23:39:05Z",
+      "merged_at": "2026-09-29T07:16:51Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23594,
+      "url": "https://github.com/vitejs/vite/pull/23594",
+      "created_at": "2026-09-27T13:26:21Z",
+      "merged_at": "2026-10-01T04:15:24Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23590,
+      "url": "https://github.com/vitejs/vite/pull/23590",
+      "created_at": "2026-09-26T08:03:35Z",
+      "merged_at": "2026-09-30T04:14:01Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23583,
+      "url": "https://github.com/vitejs/vite/pull/23583",
+      "created_at": "2026-09-25T05:58:21Z",
+      "merged_at": "2026-09-25T08:05:21Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23582,
+      "url": "https://github.com/vitejs/vite/pull/23582",
+      "created_at": "2026-09-25T05:43:52Z",
+      "merged_at": "2026-09-25T08:06:09Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23576,
+      "url": "https://github.com/vitejs/vite/pull/23576",
+      "created_at": "2026-09-24T17:11:23Z",
+      "merged_at": "2026-10-08T05:10:27Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23565,
+      "url": "https://github.com/vitejs/vite/pull/23565",
+      "created_at": "2026-09-24T06:58:40Z",
+      "merged_at": "2026-09-25T02:25:41Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23554,
+      "url": "https://github.com/vitejs/vite/pull/23554",
+      "created_at": "2026-09-22T15:25:07Z",
+      "merged_at": "2026-09-23T06:51:14Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23543,
+      "url": "https://github.com/vitejs/vite/pull/23543",
+      "created_at": "2026-09-21T11:43:49Z",
+      "merged_at": "2026-09-23T06:52:57Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23541,
+      "url": "https://github.com/vitejs/vite/pull/23541",
+      "created_at": "2026-09-21T09:09:30Z",
+      "merged_at": "2026-09-24T11:00:06Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23540,
+      "url": "https://github.com/vitejs/vite/pull/23540",
+      "created_at": "2026-09-21T03:26:22Z",
+      "merged_at": "2026-09-22T05:31:11Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23536,
+      "url": "https://github.com/vitejs/vite/pull/23536",
+      "created_at": "2026-09-20T20:51:58Z",
+      "merged_at": "2026-09-30T06:20:41Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23532,
+      "url": "https://github.com/vitejs/vite/pull/23532",
+      "created_at": "2026-09-20T01:26:15Z",
+      "merged_at": "2026-09-21T12:15:51Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23525,
+      "url": "https://github.com/vitejs/vite/pull/23525",
+      "created_at": "2026-09-19T15:36:11Z",
+      "merged_at": "2026-09-22T02:55:58Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23519,
+      "url": "https://github.com/vitejs/vite/pull/23519",
+      "created_at": "2026-09-18T11:38:41Z",
+      "merged_at": "2026-09-24T10:11:36Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23513,
+      "url": "https://github.com/vitejs/vite/pull/23513",
+      "created_at": "2026-09-17T19:12:49Z",
+      "merged_at": "2026-09-25T08:01:11Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "vitejs/vite",
+      "number": 23511,
+      "url": "https://github.com/vitejs/vite/pull/23511",
+      "created_at": "2026-09-17T14:49:39Z",
+      "merged_at": "2026-09-24T11:30:51Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18180,
+      "url": "https://github.com/withastro/astro/pull/18180",
+      "created_at": "2026-09-29T17:21:05Z",
+      "merged_at": "2026-10-07T12:50:16Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18179,
+      "url": "https://github.com/withastro/astro/pull/18179",
+      "created_at": "2026-09-29T15:01:46Z",
+      "merged_at": "2026-09-29T15:57:44Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18147,
+      "url": "https://github.com/withastro/astro/pull/18147",
+      "created_at": "2026-09-26T18:18:53Z",
+      "merged_at": "2026-09-27T15:44:21Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18139,
+      "url": "https://github.com/withastro/astro/pull/18139",
+      "created_at": "2026-09-26T02:08:48Z",
+      "merged_at": "2026-09-27T18:26:07Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18120,
+      "url": "https://github.com/withastro/astro/pull/18120",
+      "created_at": "2026-09-24T14:09:20Z",
+      "merged_at": "2026-10-06T12:38:42Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18119,
+      "url": "https://github.com/withastro/astro/pull/18119",
+      "created_at": "2026-09-24T12:21:37Z",
+      "merged_at": "2026-09-28T15:05:00Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18117,
+      "url": "https://github.com/withastro/astro/pull/18117",
+      "created_at": "2026-09-24T09:08:44Z",
+      "merged_at": "2026-10-01T10:35:36Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18114,
+      "url": "https://github.com/withastro/astro/pull/18114",
+      "created_at": "2026-09-23T19:35:40Z",
+      "merged_at": "2026-09-24T14:06:46Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18113,
+      "url": "https://github.com/withastro/astro/pull/18113",
+      "created_at": "2026-09-23T14:38:03Z",
+      "merged_at": "2026-09-24T09:08:10Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18112,
+      "url": "https://github.com/withastro/astro/pull/18112",
+      "created_at": "2026-09-23T14:08:04Z",
+      "merged_at": "2026-09-25T12:39:14Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18104,
+      "url": "https://github.com/withastro/astro/pull/18104",
+      "created_at": "2026-09-22T20:09:53Z",
+      "merged_at": "2026-10-21T14:32:36Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18096,
+      "url": "https://github.com/withastro/astro/pull/18096",
+      "created_at": "2026-09-22T12:28:26Z",
+      "merged_at": "2026-09-22T14:24:57Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18086,
+      "url": "https://github.com/withastro/astro/pull/18086",
+      "created_at": "2026-09-21T10:14:28Z",
+      "merged_at": "2026-09-21T11:48:26Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18085,
+      "url": "https://github.com/withastro/astro/pull/18085",
+      "created_at": "2026-09-21T03:48:38Z",
+      "merged_at": "2026-10-27T14:46:01Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18078,
+      "url": "https://github.com/withastro/astro/pull/18078",
+      "created_at": "2026-09-20T21:18:54Z",
+      "merged_at": "2026-09-26T15:22:13Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18074,
+      "url": "https://github.com/withastro/astro/pull/18074",
+      "created_at": "2026-09-19T15:38:17Z",
+      "merged_at": "2026-09-21T14:18:17Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18057,
+      "url": "https://github.com/withastro/astro/pull/18057",
+      "created_at": "2026-09-18T08:27:11Z",
+      "merged_at": "2026-09-26T15:34:18Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18038,
+      "url": "https://github.com/withastro/astro/pull/18038",
+      "created_at": "2026-09-17T01:58:21Z",
+      "merged_at": "2026-09-17T03:07:02Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18035,
+      "url": "https://github.com/withastro/astro/pull/18035",
+      "created_at": "2026-09-16T20:57:30Z",
+      "merged_at": "2026-09-22T18:52:03Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "withastro/astro",
+      "number": 18034,
+      "url": "https://github.com/withastro/astro/pull/18034",
+      "created_at": "2026-09-16T20:53:19Z",
+      "merged_at": "2026-09-17T21:05:47Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19878,
+      "url": "https://github.com/prometheus/prometheus/pull/19878",
+      "created_at": "2026-09-30T15:45:48Z",
+      "merged_at": "2026-10-25T16:50:00Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19877,
+      "url": "https://github.com/prometheus/prometheus/pull/19877",
+      "created_at": "2026-09-30T12:24:37Z",
+      "merged_at": "2026-10-16T07:26:57Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19868,
+      "url": "https://github.com/prometheus/prometheus/pull/19868",
+      "created_at": "2026-09-29T18:32:37Z",
+      "merged_at": "2026-10-28T14:57:04Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19866,
+      "url": "https://github.com/prometheus/prometheus/pull/19866",
+      "created_at": "2026-09-29T16:03:56Z",
+      "merged_at": "2026-10-09T09:36:33Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19858,
+      "url": "https://github.com/prometheus/prometheus/pull/19858",
+      "created_at": "2026-09-29T07:11:40Z",
+      "merged_at": "2026-09-29T14:06:59Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19855,
+      "url": "https://github.com/prometheus/prometheus/pull/19855",
+      "created_at": "2026-09-28T16:27:54Z",
+      "merged_at": "2026-10-16T07:44:07Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19854,
+      "url": "https://github.com/prometheus/prometheus/pull/19854",
+      "created_at": "2026-09-28T14:44:55Z",
+      "merged_at": "2026-09-29T14:56:20Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19853,
+      "url": "https://github.com/prometheus/prometheus/pull/19853",
+      "created_at": "2026-09-28T10:02:34Z",
+      "merged_at": "2026-09-29T12:27:05Z",
+      "author_association": "NONE"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19843,
+      "url": "https://github.com/prometheus/prometheus/pull/19843",
+      "created_at": "2026-09-26T08:14:06Z",
+      "merged_at": "2026-10-01T10:15:25Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19842,
+      "url": "https://github.com/prometheus/prometheus/pull/19842",
+      "created_at": "2026-09-26T08:14:04Z",
+      "merged_at": "2026-10-01T08:59:47Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19838,
+      "url": "https://github.com/prometheus/prometheus/pull/19838",
+      "created_at": "2026-09-25T17:19:41Z",
+      "merged_at": "2026-10-01T09:02:22Z",
+      "author_association": "NONE"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19830,
+      "url": "https://github.com/prometheus/prometheus/pull/19830",
+      "created_at": "2026-09-25T04:54:19Z",
+      "merged_at": "2026-09-25T14:26:37Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19828,
+      "url": "https://github.com/prometheus/prometheus/pull/19828",
+      "created_at": "2026-09-24T22:07:08Z",
+      "merged_at": "2026-09-29T12:37:46Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19826,
+      "url": "https://github.com/prometheus/prometheus/pull/19826",
+      "created_at": "2026-09-24T14:15:58Z",
+      "merged_at": "2026-09-25T07:25:38Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19821,
+      "url": "https://github.com/prometheus/prometheus/pull/19821",
+      "created_at": "2026-09-24T11:12:16Z",
+      "merged_at": "2026-10-22T13:12:53Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19820,
+      "url": "https://github.com/prometheus/prometheus/pull/19820",
+      "created_at": "2026-09-24T11:12:13Z",
+      "merged_at": "2026-10-28T11:14:26Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19819,
+      "url": "https://github.com/prometheus/prometheus/pull/19819",
+      "created_at": "2026-09-23T15:40:55Z",
+      "merged_at": "2026-09-23T16:11:40Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19809,
+      "url": "https://github.com/prometheus/prometheus/pull/19809",
+      "created_at": "2026-09-23T05:59:59Z",
+      "merged_at": "2026-09-23T13:27:27Z",
+      "author_association": "NONE"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19805,
+      "url": "https://github.com/prometheus/prometheus/pull/19805",
+      "created_at": "2026-09-22T14:42:21Z",
+      "merged_at": "2026-09-23T14:46:39Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "number": 19797,
+      "url": "https://github.com/prometheus/prometheus/pull/19797",
+      "created_at": "2026-09-21T23:41:16Z",
+      "merged_at": "2026-10-05T09:45:02Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14519,
+      "url": "https://github.com/cli/cli/pull/14519",
+      "created_at": "2026-09-25T15:33:46Z",
+      "merged_at": "2026-09-29T16:23:49Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14474,
+      "url": "https://github.com/cli/cli/pull/14474",
+      "created_at": "2026-09-18T22:53:14Z",
+      "merged_at": "2026-10-12T13:43:35Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14461,
+      "url": "https://github.com/cli/cli/pull/14461",
+      "created_at": "2026-09-15T12:00:50Z",
+      "merged_at": "2026-09-15T13:30:23Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14363,
+      "url": "https://github.com/cli/cli/pull/14363",
+      "created_at": "2026-09-05T06:52:06Z",
+      "merged_at": "2026-09-05T13:44:37Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14343,
+      "url": "https://github.com/cli/cli/pull/14343",
+      "created_at": "2026-09-04T08:40:10Z",
+      "merged_at": "2026-09-04T09:02:01Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14318,
+      "url": "https://github.com/cli/cli/pull/14318",
+      "created_at": "2026-09-02T08:42:30Z",
+      "merged_at": "2026-09-02T16:55:20Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14313,
+      "url": "https://github.com/cli/cli/pull/14313",
+      "created_at": "2026-09-01T14:53:34Z",
+      "merged_at": "2026-09-09T16:35:19Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14260,
+      "url": "https://github.com/cli/cli/pull/14260",
+      "created_at": "2026-08-25T15:33:20Z",
+      "merged_at": "2026-09-01T14:17:08Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14244,
+      "url": "https://github.com/cli/cli/pull/14244",
+      "created_at": "2026-08-24T00:45:30Z",
+      "merged_at": "2026-08-26T11:29:42Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14207,
+      "url": "https://github.com/cli/cli/pull/14207",
+      "created_at": "2026-08-20T15:50:16Z",
+      "merged_at": "2026-08-20T15:59:43Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14198,
+      "url": "https://github.com/cli/cli/pull/14198",
+      "created_at": "2026-08-19T13:02:42Z",
+      "merged_at": "2026-09-02T09:39:09Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14191,
+      "url": "https://github.com/cli/cli/pull/14191",
+      "created_at": "2026-08-18T12:42:24Z",
+      "merged_at": "2026-08-21T11:59:09Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14154,
+      "url": "https://github.com/cli/cli/pull/14154",
+      "created_at": "2026-08-15T15:29:16Z",
+      "merged_at": "2026-09-01T14:15:55Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14148,
+      "url": "https://github.com/cli/cli/pull/14148",
+      "created_at": "2026-08-15T00:09:53Z",
+      "merged_at": "2026-10-21T08:50:05Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14141,
+      "url": "https://github.com/cli/cli/pull/14141",
+      "created_at": "2026-08-13T18:24:52Z",
+      "merged_at": "2026-08-13T18:59:06Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14136,
+      "url": "https://github.com/cli/cli/pull/14136",
+      "created_at": "2026-08-13T10:26:41Z",
+      "merged_at": "2026-08-21T15:11:54Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14060,
+      "url": "https://github.com/cli/cli/pull/14060",
+      "created_at": "2026-08-04T10:59:33Z",
+      "merged_at": "2026-08-26T12:54:57Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14056,
+      "url": "https://github.com/cli/cli/pull/14056",
+      "created_at": "2026-08-03T17:41:50Z",
+      "merged_at": "2026-08-10T09:07:05Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14030,
+      "url": "https://github.com/cli/cli/pull/14030",
+      "created_at": "2026-07-31T15:16:36Z",
+      "merged_at": "2026-07-31T15:26:23Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "cli/cli",
+      "number": 14007,
+      "url": "https://github.com/cli/cli/pull/14007",
+      "created_at": "2026-07-29T14:38:39Z",
+      "merged_at": "2026-08-21T13:52:42Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42186,
+      "url": "https://github.com/neovim/neovim/pull/42186",
+      "created_at": "2026-09-30T22:47:01Z",
+      "merged_at": "2026-09-30T23:18:18Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42184,
+      "url": "https://github.com/neovim/neovim/pull/42184",
+      "created_at": "2026-09-30T19:17:06Z",
+      "merged_at": "2026-10-01T09:30:17Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42183,
+      "url": "https://github.com/neovim/neovim/pull/42183",
+      "created_at": "2026-09-30T19:11:19Z",
+      "merged_at": "2026-10-01T00:05:43Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42173,
+      "url": "https://github.com/neovim/neovim/pull/42173",
+      "created_at": "2026-09-30T17:48:06Z",
+      "merged_at": "2026-10-02T13:33:37Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42152,
+      "url": "https://github.com/neovim/neovim/pull/42152",
+      "created_at": "2026-09-29T22:49:27Z",
+      "merged_at": "2026-10-03T00:27:04Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42151,
+      "url": "https://github.com/neovim/neovim/pull/42151",
+      "created_at": "2026-09-29T22:38:22Z",
+      "merged_at": "2026-09-30T14:16:28Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42150,
+      "url": "https://github.com/neovim/neovim/pull/42150",
+      "created_at": "2026-09-29T22:31:51Z",
+      "merged_at": "2026-09-30T23:50:49Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42146,
+      "url": "https://github.com/neovim/neovim/pull/42146",
+      "created_at": "2026-09-29T18:02:34Z",
+      "merged_at": "2026-09-30T21:24:05Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42136,
+      "url": "https://github.com/neovim/neovim/pull/42136",
+      "created_at": "2026-09-29T00:28:38Z",
+      "merged_at": "2026-09-29T10:46:07Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42130,
+      "url": "https://github.com/neovim/neovim/pull/42130",
+      "created_at": "2026-09-28T09:45:42Z",
+      "merged_at": "2026-10-05T16:45:08Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42121,
+      "url": "https://github.com/neovim/neovim/pull/42121",
+      "created_at": "2026-09-27T22:32:39Z",
+      "merged_at": "2026-09-27T23:18:48Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42117,
+      "url": "https://github.com/neovim/neovim/pull/42117",
+      "created_at": "2026-09-27T09:57:40Z",
+      "merged_at": "2026-09-27T11:36:30Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42114,
+      "url": "https://github.com/neovim/neovim/pull/42114",
+      "created_at": "2026-09-26T22:48:31Z",
+      "merged_at": "2026-09-30T21:01:29Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42105,
+      "url": "https://github.com/neovim/neovim/pull/42105",
+      "created_at": "2026-09-26T08:21:35Z",
+      "merged_at": "2026-09-27T11:39:51Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42085,
+      "url": "https://github.com/neovim/neovim/pull/42085",
+      "created_at": "2026-09-25T11:42:36Z",
+      "merged_at": "2026-09-29T13:53:18Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42065,
+      "url": "https://github.com/neovim/neovim/pull/42065",
+      "created_at": "2026-09-24T12:47:47Z",
+      "merged_at": "2026-09-24T15:38:58Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42045,
+      "url": "https://github.com/neovim/neovim/pull/42045",
+      "created_at": "2026-09-23T06:05:10Z",
+      "merged_at": "2026-09-24T01:38:21Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42044,
+      "url": "https://github.com/neovim/neovim/pull/42044",
+      "created_at": "2026-09-23T05:47:45Z",
+      "merged_at": "2026-09-24T18:20:06Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42028,
+      "url": "https://github.com/neovim/neovim/pull/42028",
+      "created_at": "2026-09-21T20:18:07Z",
+      "merged_at": "2026-09-23T23:43:38Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "neovim/neovim",
+      "number": 42017,
+      "url": "https://github.com/neovim/neovim/pull/42017",
+      "created_at": "2026-09-21T04:40:27Z",
+      "merged_at": "2026-09-21T08:32:06Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 124048,
+      "url": "https://github.com/godotengine/godot/pull/124048",
+      "created_at": "2026-09-30T23:29:00Z",
+      "merged_at": "2026-10-01T15:58:29Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 124047,
+      "url": "https://github.com/godotengine/godot/pull/124047",
+      "created_at": "2026-09-30T21:47:49Z",
+      "merged_at": "2026-10-01T15:58:29Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 124042,
+      "url": "https://github.com/godotengine/godot/pull/124042",
+      "created_at": "2026-09-30T20:24:29Z",
+      "merged_at": "2026-10-01T15:58:29Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 124033,
+      "url": "https://github.com/godotengine/godot/pull/124033",
+      "created_at": "2026-09-30T16:43:47Z",
+      "merged_at": "2026-09-30T19:43:03Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 124009,
+      "url": "https://github.com/godotengine/godot/pull/124009",
+      "created_at": "2026-09-30T01:09:37Z",
+      "merged_at": "2026-09-30T16:57:13Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 124007,
+      "url": "https://github.com/godotengine/godot/pull/124007",
+      "created_at": "2026-09-30T00:52:32Z",
+      "merged_at": "2026-10-07T18:34:32Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 123998,
+      "url": "https://github.com/godotengine/godot/pull/123998",
+      "created_at": "2026-09-29T23:08:29Z",
+      "merged_at": "2026-11-10T18:57:22Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 123991,
+      "url": "https://github.com/godotengine/godot/pull/123991",
+      "created_at": "2026-09-29T21:09:00Z",
+      "merged_at": "2026-09-30T16:57:13Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 123990,
+      "url": "https://github.com/godotengine/godot/pull/123990",
+      "created_at": "2026-09-29T20:38:31Z",
+      "merged_at": "2026-09-30T16:57:13Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 123976,
+      "url": "https://github.com/godotengine/godot/pull/123976",
+      "created_at": "2026-09-29T16:48:12Z",
+      "merged_at": "2026-09-30T16:57:13Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 123975,
+      "url": "https://github.com/godotengine/godot/pull/123975",
+      "created_at": "2026-09-29T16:43:33Z",
+      "merged_at": "2026-09-30T16:57:13Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 123970,
+      "url": "https://github.com/godotengine/godot/pull/123970",
+      "created_at": "2026-09-29T15:29:16Z",
+      "merged_at": "2026-11-04T16:36:46Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 123959,
+      "url": "https://github.com/godotengine/godot/pull/123959",
+      "created_at": "2026-09-29T12:11:57Z",
+      "merged_at": "2026-10-21T17:28:24Z",
+      "author_association": "NONE"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 123954,
+      "url": "https://github.com/godotengine/godot/pull/123954",
+      "created_at": "2026-09-29T10:12:01Z",
+      "merged_at": "2026-09-30T01:31:08Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 123952,
+      "url": "https://github.com/godotengine/godot/pull/123952",
+      "created_at": "2026-09-29T09:41:32Z",
+      "merged_at": "2026-09-29T19:11:39Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 123951,
+      "url": "https://github.com/godotengine/godot/pull/123951",
+      "created_at": "2026-09-29T09:24:26Z",
+      "merged_at": "2026-09-29T11:27:46Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 123945,
+      "url": "https://github.com/godotengine/godot/pull/123945",
+      "created_at": "2026-09-28T22:40:12Z",
+      "merged_at": "2026-09-29T19:11:39Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 123940,
+      "url": "https://github.com/godotengine/godot/pull/123940",
+      "created_at": "2026-09-28T17:57:07Z",
+      "merged_at": "2026-09-28T23:26:15Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 123939,
+      "url": "https://github.com/godotengine/godot/pull/123939",
+      "created_at": "2026-09-28T17:49:46Z",
+      "merged_at": "2026-09-28T18:37:39Z",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "repository": "godotengine/godot",
+      "number": 123938,
+      "url": "https://github.com/godotengine/godot/pull/123938",
+      "created_at": "2026-09-28T17:09:34Z",
+      "merged_at": "2026-10-05T15:59:31Z",
+      "author_association": "CONTRIBUTOR"
+    }
+  ]
+}
