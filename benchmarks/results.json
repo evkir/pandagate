@@ -1,0 +1,4477 @@
+{
+  "pandagate_commit": "796b735c3b387874fe8e40ec7da0f1f17cc77003",
+  "sample_taken_at": "2026-11-11T08:39:04Z",
+  "run_at": "2026-11-11T08:48:18Z",
+  "summary": {
+    "pull_requests": 200,
+    "commented": 100,
+    "comment_rate": 0.5,
+    "rules": {
+      "R1": {
+        "present": 124,
+        "absent": 76,
+        "not_applicable": 0,
+        "unknown": 0,
+        "absent_rate": 0.38
+      },
+      "R2": {
+        "present": 79,
+        "absent": 43,
+        "not_applicable": 78,
+        "unknown": 0,
+        "absent_rate": 0.3525
+      },
+      "R3": {
+        "present": 162,
+        "absent": 0,
+        "not_applicable": 38,
+        "unknown": 0,
+        "absent_rate": 0.0
+      }
+    },
+    "by_repository": {
+      "pytest-dev/pytest": {
+        "pull_requests": 20,
+        "commented": 4
+      },
+      "pandas-dev/pandas": {
+        "pull_requests": 20,
+        "commented": 3
+      },
+      "astral-sh/ruff": {
+        "pull_requests": 20,
+        "commented": 17
+      },
+      "tokio-rs/tokio": {
+        "pull_requests": 20,
+        "commented": 11
+      },
+      "vitejs/vite": {
+        "pull_requests": 20,
+        "commented": 8
+      },
+      "withastro/astro": {
+        "pull_requests": 20,
+        "commented": 10
+      },
+      "prometheus/prometheus": {
+        "pull_requests": 20,
+        "commented": 11
+      },
+      "cli/cli": {
+        "pull_requests": 20,
+        "commented": 9
+      },
+      "neovim/neovim": {
+        "pull_requests": 20,
+        "commented": 9
+      },
+      "godotengine/godot": {
+        "pull_requests": 20,
+        "commented": 18
+      }
+    }
+  },
+  "pull_requests": [
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/15058",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #6750"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "2 logic file(s) changed, 47 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "2 area(s) of logic touched: src/_pytest, testing/python"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/15044",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #15043"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/_pytest"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/15040",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #11783"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/_pytest"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/15034",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #14552"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/_pytest"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/15033",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #9924"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/_pytest"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/14989",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #14552"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/_pytest"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/14977",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/14969",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #10644, #14909"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/_pytest"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/14967",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/14954",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #14953"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 2 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/_pytest"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/14934",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #10210, #10215"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "2 logic file(s) changed, 45 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "2 area(s) of logic touched: src/_pytest, testing/python"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/14933",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #12622"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/14931",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #14912"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 6 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/_pytest"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/14910",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #14209, #14909"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/_pytest"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/14875",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #6997"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/_pytest"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/14845",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #14834"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/14838",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #13369"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/_pytest"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/14833",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #13354"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/_pytest"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/14829",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #14828"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "4 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/_pytest"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pytest-dev/pytest",
+      "url": "https://github.com/pytest-dev/pytest/pull/14825",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #14818"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69989",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #69959"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69985",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "3 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pandas/_libs"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69961",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #44284, #59882"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "2 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pandas/io"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69960",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #62936, #63013"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "4 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pandas/plotting"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69924",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #69923"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pandas/core"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69921",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #37811"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pandas/plotting"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69917",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #46939"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "4 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pandas/core"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69916",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69870",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #32471"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pandas/core"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69792",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #69749"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "2 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pandas/core"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69774",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #53942, #65559"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69668",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #61183, #66339, #69486"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "3 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pandas/core"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69487",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #63105"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69485",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #69461"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 2 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pandas/_libs"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69480",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #61020"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 8 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pandas/plotting"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69468",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #69467"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "2 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pandas/_libs"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69464",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #45819"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pandas/tseries"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69463",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #54908"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pandas/core"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69450",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #62361"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "4 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pandas/core"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "pandas-dev/pandas",
+      "url": "https://github.com/pandas-dev/pandas/pull/69446",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #62340, #62576"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "3 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pandas/io"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/29026",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "6 logic file(s) changed, 848 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "2 area(s) of logic touched: crates/ruff_benchmark, crates/ty_python_semantic"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/29019",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/29018",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 67 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: crates/ty_python_semantic"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/29015",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 95 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: crates/ty_python_semantic"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/29014",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #26680, #28677"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "3 logic file(s) changed, 413 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: crates/ty_python_semantic"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/29001",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #28989"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: crates/ruff_linter"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/28999",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "4 logic file(s) changed, 170 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: crates/ty_python_semantic"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/28997",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #28887"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 23 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: python/ruff-ecosystem"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/28981",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 138 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: crates/ty_python_semantic"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/28980",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 3 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "2 area(s) of logic touched: scripts, scripts/ty_benchmark"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/28978",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #28911"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 5 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: python/py-fuzzer"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/28959",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "4 logic file(s) changed, 84 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: crates/ty_project"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/28941",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #24690"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/28923",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "2 logic file(s) changed, 103 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: crates/ty_module_resolver"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/28921",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "2 logic file(s) changed, 113 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: crates/ty_module_resolver"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/28912",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #28201"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 42 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: crates/ty_module_resolver"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/28911",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #28889"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 22 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "3 area(s) of logic touched: python/py-fuzzer, scripts, scripts/ty_benchmark"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/28910",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #28889"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "3 logic file(s) changed, 6 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: crates/ty_python_semantic"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/28907",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff/pull/28906",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8528",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #8285"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 3 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tokio/src"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8526",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #4665, #8520"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tokio/src"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8524",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #7268"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8521",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "2 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tokio/src"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8519",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #8334"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tokio-util/src"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8518",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #2678, #7031"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 2 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tokio/src"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8512",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #8141"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tokio-util/src"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8511",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "2 logic file(s) changed, 6 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tokio/src"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8506",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #7174, #7178"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 8 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tokio/src"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8505",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #3018, #8596"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "4 logic file(s) changed, 132 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tokio/src"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8504",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #6368"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 4 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tokio/src"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8501",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #3960"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "3 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tokio/src"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8500",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 2 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tokio-stream/src"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8499",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8497",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tokio/src"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8496",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 8 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tokio/src"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8495",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "3 logic file(s) changed, 15 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tokio-stream/src"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8494",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 2 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tokio/src"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8488",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "tokio-rs/tokio",
+      "url": "https://github.com/tokio-rs/tokio/pull/8486",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tokio-util/src"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23614",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #21871"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/vite"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23611",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #23178, #23262"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/vite"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23609",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #6195, #6199"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "2 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/vite"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23600",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #22970"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 4 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "2 area(s) of logic touched: packages/vite, playground/optimize-deps"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23594",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #20578"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23590",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #23512"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 2 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "2 area(s) of logic touched: packages/vite, playground/optimize-deps"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23583",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #23541"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 13 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/vite"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23582",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23576",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #23575"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "2 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/vite"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23565",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #23545, #23553"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "3 test file(s) changed alongside 2 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/vite"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23554",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "2 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/vite"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23543",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 20 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/create-vite"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23541",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #23526"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "2 logic file(s) changed, 27 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/create-vite"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23540",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #23471"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "2 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/vite"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23536",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #23514"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/vite"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23532",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "2 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/vite"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23525",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23519",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #23518"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/vite"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23513",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "4 test file(s) changed alongside 4 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/vite"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "vitejs/vite",
+      "url": "https://github.com/vitejs/vite/pull/23511",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #23506"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/vite"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18180",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/integrations"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18179",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "4 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/astro"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18147",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #18101"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18139",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "2 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/markdown"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18120",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #15595, #17677, #18000, #18057, #18069, #18076, #18078, #18088, #18099, #18114, #18133, #18139, #18145, #18146, #18155, #18159, #18163, #18164, #18166, #18176, #18179, #18187, #18193, #18210, #18213, #18215, #18220, #18226, #18241, #18242, #18243, #18244, #18245, #18246, #18247, #18248, #18249, #18250, #18251, #18252, #18253, #18254"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18119",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #18112"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "73 test file(s) changed alongside 7 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "2 area(s) of logic touched: packages/astro, packages/integrations"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18117",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #18112, #18119"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "4 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/integrations"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18114",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "3 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: (root)"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18113",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #17736"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18112",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "5 test file(s) changed alongside 25 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/astro"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18104",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #18034, #18103"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18096",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 4 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/astro"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18086",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 2 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/astro"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18085",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #18073"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/integrations"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18078",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #17778, #18089"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 7 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/astro"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18074",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/astro"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18057",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #15077, #15525, #18056, #18067"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 2 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: packages/integrations"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18038",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18035",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #17578, #17946, #17951, #17986, #18007, #18008, #18029, #18032, #18036, #18043, #18044, #18046, #18050, #18053, #18059, #18063, #18074, #18086, #18091, #18096"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "withastro/astro",
+      "url": "https://github.com/withastro/astro/pull/18034",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19878",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #17614, #19887, #19888"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 3 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "3 area(s) of logic touched: discovery, discovery/aws, discovery/refresh"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19877",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #19870"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19868",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "3 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: model/textparse"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19866",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #19864"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "3 test file(s) changed alongside 3 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "2 area(s) of logic touched: storage/remote, tsdb/agent"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19858",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "2 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tsdb"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19855",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #19550"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "4 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tsdb"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19854",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tsdb"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19853",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 5 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tsdb/chunks"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19843",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19842",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #18302, #19840"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 5 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tsdb"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19838",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "1 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: cmd/prometheus"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19830",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #12170, #17977"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 2 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: promql/parser"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19828",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "4 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: promql"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19826",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19821",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #19823"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 2 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: promql/parser"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19820",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 2 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "2 area(s) of logic touched: promql/parser, web/ui"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19819",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #19814"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 2 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "2 area(s) of logic touched: tsdb, tsdb/agent"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19809",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "3 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: util/strutil"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19805",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #19804"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 2 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: tsdb"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/pull/19797",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 3 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: promql/parser"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14519",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "2 logic file(s) changed, 11 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pkg/cmd"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14474",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14461",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14363",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14343",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14318",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #14026, #14284, #14308"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14313",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #14297"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "3 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pkg/cmd"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14260",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #13523, #14118"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: internal/skills"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14244",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #14136"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "4 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pkg/cmd"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14207",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #14147"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14198",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #14191"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 3 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "2 area(s) of logic touched: internal/ghcmd, pkg/cmd"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14191",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: internal/ghcmd"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14154",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #13681, #14153"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "2 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: internal/skills"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14148",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #3718"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "4 test file(s) changed alongside 3 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "2 area(s) of logic touched: pkg/cmd, pkg/markdown"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14141",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14136",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "5 test file(s) changed alongside 3 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pkg/cmd"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14060",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #12927, #14076"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "5 test file(s) changed alongside 6 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "2 area(s) of logic touched: git, pkg/cmd"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14056",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #14055"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: pkg/cmd"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14030",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "cli/cli",
+      "url": "https://github.com/cli/cli/pull/14007",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #3442"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 3 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "2 area(s) of logic touched: git, pkg/cmd"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42186",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "4 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/nvim"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42184",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "4 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: scripts"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42183",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "4 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/nvim"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42173",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #31726"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "4 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/nvim"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42152",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #41940"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/nvim"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42151",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #41896"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/nvim"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42150",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #41929"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 2 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "2 area(s) of logic touched: runtime/lua, src/nvim"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42146",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #40581, #42142"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/gen"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42136",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #42121"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 8 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: scripts"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42130",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #29976, #41173, #41196"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 3 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "2 area(s) of logic touched: runtime/colors, src/nvim"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42121",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 128 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: scripts"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42117",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "2 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: runtime/lua"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42114",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #42113"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 3 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: runtime/lua"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42105",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #8983"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "28 test file(s) changed alongside 2 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/nvim"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42085",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #32216"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "1 test file(s) changed alongside 2 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/mpack"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42065",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 20 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: scripts"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42045",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #42019"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "PRESENT",
+          "detail": "2 test file(s) changed alongside 1 logic file(s)"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: src/nvim"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42044",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #42045"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "1 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: scripts"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42028",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #41990"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 33 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: runtime/lua"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "neovim/neovim",
+      "url": "https://github.com/neovim/neovim/pull/42017",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 7 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: scripts"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/124048",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #117489"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "2 logic file(s) changed, 8 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: editor"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/124047",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #123177"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "no logic files changed"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/124042",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #124041"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "5 logic file(s) changed, 9 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "3 area(s) of logic touched: platform/macos, scene/main, servers/display"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/124033",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 6 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: core/object"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/124009",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #123887"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 17 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: drivers/gles3"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/124007",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "1 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: core/object"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/123998",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #87626, #89657, #95512, #119740, #119752, #120394"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "5 logic file(s) changed, 65 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "3 area(s) of logic touched: core/object, core/os, core/templates"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/123991",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #108943"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "2 logic file(s) changed, 9 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: drivers/gles3"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/123990",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "4 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: drivers/gles3"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/123976",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #118932, #123943"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "2 logic file(s) changed, 44 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: modules/mono"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/123975",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "2 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: scene/gui"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/123970",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "11 logic file(s) changed, 1600 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "2 area(s) of logic touched: scene/resources, thirdparty/meshoptimizer"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/123959",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #91404, #91556, #108934, #115511, #116140"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "3 logic file(s) changed, 6 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "3 area(s) of logic touched: scene/2d, scene/3d, scene/resources"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/123954",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "4 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: scene/gui"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/123952",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #102963"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 12 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: scene/main"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/123951",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #123574"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "4 logic file(s) changed, 155 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: platform/android"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/123945",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "ABSENT",
+          "detail": "no issue reference in the title or body"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "2 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: modules/openxr"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/123940",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #119993"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "NOT_APPLICABLE",
+          "detail": "4 line(s) of logic changed, below the 5 line threshold"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: modules/etcpak"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/123939",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #65533"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "2 logic file(s) changed, 114 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: modules/mono"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "repository": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot/pull/123938",
+      "signals": [
+        {
+          "rule_id": "R1",
+          "outcome": "PRESENT",
+          "detail": "references #123390, #123798"
+        },
+        {
+          "rule_id": "R2",
+          "outcome": "ABSENT",
+          "detail": "1 logic file(s) changed, 14 line(s), no test file changed"
+        },
+        {
+          "rule_id": "R3",
+          "outcome": "PRESENT",
+          "detail": "1 area(s) of logic touched: scene/3d"
+        }
+      ],
+      "warnings": []
+    }
+  ]
+}
