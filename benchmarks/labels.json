@@ -594,6 +594,126 @@
       "rule_id": "R2",
       "verdict": "correct",
       "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/124048",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/124042",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/124033",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/124033",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/124009",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/124007",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/123998",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/123991",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/123990",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/123976",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/123975",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/123970",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/123970",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/123959",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/123954",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/123952",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/123951",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/123945",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/123939",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/godotengine/godot/pull/123938",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
     }
   ]
 }
