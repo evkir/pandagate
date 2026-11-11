@@ -1,0 +1,24 @@
+name: PandaGate
+
+on:
+  pull_request_target:
+    types: [opened, edited, synchronize, reopened]
+
+permissions: {}
+
+concurrency:
+  group: pandagate-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  report:
+    name: Report on the pull request
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      # No checkout: the pull request's code is never fetched or run.
+      # This repository runs its own action from main.
+      - uses: evkir/pandagate@main
