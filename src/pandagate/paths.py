@@ -142,3 +142,9 @@ def classify(path: str) -> PathKind:
 
 
 # Live check of the comment lifecycle; this branch is never merged.
+# Live check line 1; this branch is never merged.
+# Live check line 2; this branch is never merged.
+# Live check line 3; this branch is never merged.
+# Live check line 4; this branch is never merged.
+# Live check line 5; this branch is never merged.
+# Live check line 6; this branch is never merged.
