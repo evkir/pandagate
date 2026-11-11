@@ -276,6 +276,60 @@
       "rule_id": "R1",
       "verdict": "correct",
       "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/vitejs/vite/pull/23583",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/vitejs/vite/pull/23582",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "only the template example fixes #123 in the description, Development empty"
+    },
+    {
+      "url": "https://github.com/vitejs/vite/pull/23554",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "only the template example fixes #123 in the description, Development empty"
+    },
+    {
+      "url": "https://github.com/vitejs/vite/pull/23543",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/vitejs/vite/pull/23543",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/vitejs/vite/pull/23541",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/vitejs/vite/pull/23532",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "only the template example fixes #123 in the description, Development empty"
+    },
+    {
+      "url": "https://github.com/vitejs/vite/pull/23525",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/vitejs/vite/pull/23513",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "only a link to a pull request in nuxt/nuxt, no issue reference, Development empty"
     }
   ]
 }
