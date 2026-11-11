@@ -42,6 +42,156 @@
       "rule_id": "R2",
       "verdict": "correct",
       "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/29026",
+      "rule_id": "R1",
+      "verdict": "wrong",
+      "reason": "cross-repo-ref: astral-sh/ty#4629 in the description and in Development"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/29026",
+      "rule_id": "R2",
+      "verdict": "wrong",
+      "reason": "tests-dir: 5 files under resources/mdtest changed, #[test] added in two source files"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/29019",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/29018",
+      "rule_id": "R1",
+      "verdict": "wrong",
+      "reason": "cross-repo-ref: astral-sh/ty issues 2585 and 3871 linked in the description and in Development"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/29018",
+      "rule_id": "R2",
+      "verdict": "wrong",
+      "reason": "tests-dir: 5 files under resources/mdtest changed"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/29015",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/29015",
+      "rule_id": "R2",
+      "verdict": "wrong",
+      "reason": "tests-dir: 5 files under resources/mdtest changed"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/29014",
+      "rule_id": "R2",
+      "verdict": "wrong",
+      "reason": "tests-dir: 8 files under resources/mdtest changed, 5 #[test] added in projection/tests.rs"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/28999",
+      "rule_id": "R1",
+      "verdict": "wrong",
+      "reason": "cross-repo-ref: astral-sh/ty#4620 in the description and in Development"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/28999",
+      "rule_id": "R2",
+      "verdict": "wrong",
+      "reason": "tests-dir: 3 files under resources/mdtest changed"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/28997",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/28981",
+      "rule_id": "R1",
+      "verdict": "wrong",
+      "reason": "cross-repo-ref: astral-sh/ty#4158 in the description and in Development"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/28981",
+      "rule_id": "R2",
+      "verdict": "wrong",
+      "reason": "tests-dir: 3 files under resources/mdtest and one snapshot changed"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/28980",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/28978",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/28959",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/28959",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/28923",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/28923",
+      "rule_id": "R2",
+      "verdict": "wrong",
+      "reason": "test-support: src/testing.rs is the test helper module of the crate"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/28921",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/28921",
+      "rule_id": "R2",
+      "verdict": "wrong",
+      "reason": "test-support: src/testing.rs is the test helper module of the crate"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/28912",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/28910",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/28907",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/astral-sh/ruff/pull/28906",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
     }
   ]
 }
