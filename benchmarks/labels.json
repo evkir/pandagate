@@ -390,6 +390,78 @@
       "rule_id": "R1",
       "verdict": "correct",
       "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/prometheus/prometheus/pull/19868",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/prometheus/prometheus/pull/19858",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/prometheus/prometheus/pull/19854",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/prometheus/prometheus/pull/19853",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/prometheus/prometheus/pull/19853",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/prometheus/prometheus/pull/19843",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/prometheus/prometheus/pull/19838",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/prometheus/prometheus/pull/19828",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/prometheus/prometheus/pull/19826",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/prometheus/prometheus/pull/19820",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/prometheus/prometheus/pull/19809",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/prometheus/prometheus/pull/19797",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
     }
   ]
 }
