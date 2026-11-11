@@ -139,3 +139,6 @@ def classify(path: str) -> PathKind:
     if suffix in LOGIC_EXTENSIONS:
         return PathKind.LOGIC
     return PathKind.OTHER
+
+
+# Live check of the comment lifecycle; this branch is never merged.
