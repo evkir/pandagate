@@ -19,3 +19,4 @@ def test_no_third_party_dependencies_declared() -> None:
     with pyproject.open("rb") as fh:
         data = tomllib.load(fh)
     assert data["project"]["dependencies"] == []
+# Live check line.
