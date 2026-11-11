@@ -462,6 +462,66 @@
       "rule_id": "R1",
       "verdict": "correct",
       "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/cli/cli/pull/14519",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/cli/cli/pull/14519",
+      "rule_id": "R2",
+      "verdict": "correct",
+      "reason": "no test code in the diff"
+    },
+    {
+      "url": "https://github.com/cli/cli/pull/14474",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/cli/cli/pull/14461",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/cli/cli/pull/14363",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/cli/cli/pull/14343",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/cli/cli/pull/14191",
+      "rule_id": "R1",
+      "verdict": "wrong",
+      "reason": "qualified-ref: Closes cli/cli#12839 in the description and in Development"
+    },
+    {
+      "url": "https://github.com/cli/cli/pull/14141",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/cli/cli/pull/14136",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
+    },
+    {
+      "url": "https://github.com/cli/cli/pull/14030",
+      "rule_id": "R1",
+      "verdict": "correct",
+      "reason": "no issue reference in the title or description, Development empty"
     }
   ]
 }
