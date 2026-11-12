@@ -22,9 +22,9 @@ _URL_REFERENCE = re.compile(
 )
 _REPOSITORY = r"([A-Za-z0-9][A-Za-z0-9-]{0,38})/([\w.-]{1,100})"
 _QUALIFIED_REFERENCE = re.compile(rf"(?<![\w./-]){_REPOSITORY}#(\d+)\b")
-_CLOSING_KEYWORD = re.compile(
-    rf"\b(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s+(?:{_REPOSITORY})?#(\d+)\b", re.IGNORECASE
-)
+_KEYWORD = r"\b(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s+"
+_CLOSING_KEYWORD = re.compile(rf"{_KEYWORD}(?:{_REPOSITORY})?#(\d+)\b", re.IGNORECASE)
+_CLOSING_URL = re.compile(_KEYWORD + _URL_REFERENCE.pattern, re.IGNORECASE)
 
 
 def strip_code(text: str) -> str:
@@ -49,33 +49,45 @@ def find_references(text: str, repository: str, own_number: int) -> tuple[int, .
     return tuple(sorted(found))
 
 
+def _external_labels(
+    patterns: tuple[re.Pattern[str], ...], text: str, repository: str
+) -> tuple[str, ...]:
+    found: dict[tuple[str, int], str] = {}
+    for pattern in patterns:
+        for owner, name, number in pattern.findall(text):
+            slug = f"{owner}/{name}"
+            if owner and slug.casefold() != repository.casefold():
+                found.setdefault((slug.casefold(), int(number)), f"{slug}#{int(number)}")
+    return tuple(found[key] for key in sorted(found))
+
+
 def find_external_references(text: str, repository: str) -> tuple[str, ...]:
     """References to issues or pull requests in other repositories.
 
     They are written as owner/name#N or as a full URL. Each one is returned
     once, as owner/name#N, ordered by repository and number.
     """
-    found: dict[tuple[str, int], str] = {}
-    for pattern in (_QUALIFIED_REFERENCE, _URL_REFERENCE):
-        for owner, name, number in pattern.findall(text):
-            slug = f"{owner}/{name}"
-            if slug.casefold() != repository.casefold():
-                found.setdefault((slug.casefold(), int(number)), f"{slug}#{int(number)}")
-    return tuple(found[key] for key in sorted(found))
+    return _external_labels((_QUALIFIED_REFERENCE, _URL_REFERENCE), text, repository)
 
 
 def find_closing_references(text: str, repository: str, own_number: int) -> tuple[int, ...]:
     """Numbers tied to a closing keyword, such as "fixes #411".
 
     The number may be qualified with this repository, as in
-    "closes evkir/pandagate#411".
+    "closes evkir/pandagate#411", or given as a full URL.
     """
     found: set[int] = set()
-    for owner, name, number in _CLOSING_KEYWORD.findall(text):
-        if not owner or f"{owner}/{name}".casefold() == repository.casefold():
-            found.add(int(number))
+    for pattern in (_CLOSING_KEYWORD, _CLOSING_URL):
+        for owner, name, number in pattern.findall(text):
+            if not owner or f"{owner}/{name}".casefold() == repository.casefold():
+                found.add(int(number))
     found.discard(own_number)
     return tuple(sorted(found))
+
+
+def find_external_closing_references(text: str, repository: str) -> tuple[str, ...]:
+    """References in other repositories tied to a closing keyword."""
+    return _external_labels((_CLOSING_KEYWORD, _CLOSING_URL), text, repository)
 
 
 class IssueLinkRule:
@@ -100,7 +112,7 @@ class IssueLinkRule:
         text = strip_code(f"{facts.title}\n{facts.body}")
         if options.get("require_closing_keyword", False):
             numbers = find_closing_references(text, facts.repository, facts.number)
-            external: tuple[str, ...] = ()
+            external = find_external_closing_references(text, facts.repository)
             missing = "no closing keyword and issue reference"
         else:
             numbers = find_references(text, facts.repository, facts.number)

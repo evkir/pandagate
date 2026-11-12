@@ -156,3 +156,26 @@ def test_a_longer_path_is_not_a_qualified_reference() -> None:
 def test_find_external_references_orders_and_deduplicates() -> None:
     text = "a/b#2 a/b#1 A/B#2 evkir/pandagate#7"
     assert find_external_references(text, "evkir/pandagate") == ("a/b#1", "a/b#2")
+
+
+def test_closing_keyword_accepts_other_repositories_and_urls() -> None:
+    options = {"require_closing_keyword": True}
+    expected = {
+        "Fixes astral-sh/ty#1234": "references astral-sh/ty#1234",
+        "Closes https://github.com/evkir/pandagate/issues/411": "references #411",
+        "Resolves https://github.com/other/project/issues/7": "references other/project#7",
+    }
+    for body, detail in expected.items():
+        signal = RULE.evaluate(_facts(body=body), options)
+        assert signal.outcome is Outcome.PRESENT
+        assert signal.detail == detail
+
+
+def test_required_closing_keyword_ignores_plain_mentions_and_own_number() -> None:
+    options = {"require_closing_keyword": True}
+    bodies = [
+        "see other/project#7 and https://github.com/other/project/issues/8",
+        "closes https://github.com/evkir/pandagate/pull/412",
+    ]
+    for body in bodies:
+        assert RULE.evaluate(_facts(body=body), options).outcome is Outcome.ABSENT
