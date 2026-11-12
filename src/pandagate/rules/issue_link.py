@@ -35,9 +35,8 @@ def strip_code(text: str) -> str:
 def find_references(text: str, repository: str, own_number: int) -> tuple[int, ...]:
     """Issue or pull request numbers referenced for this same repository.
 
-    A reference to the pull request's own number is not a link to anything,
-    and a full URL pointing at another repository is a mention of that
-    repository, not a link in this one.
+    A reference to the pull request's own number is not a link to anything.
+    References to other repositories are found by find_external_references.
     """
     found: set[int] = set()
     for pattern in (_HASH_REFERENCE, _GH_REFERENCE):
@@ -48,6 +47,21 @@ def find_references(text: str, repository: str, own_number: int) -> tuple[int, .
                 found.add(int(number))
     found.discard(own_number)
     return tuple(sorted(found))
+
+
+def find_external_references(text: str, repository: str) -> tuple[str, ...]:
+    """References to issues or pull requests in other repositories.
+
+    They are written as owner/name#N or as a full URL. Each one is returned
+    once, as owner/name#N, ordered by repository and number.
+    """
+    found: dict[tuple[str, int], str] = {}
+    for pattern in (_QUALIFIED_REFERENCE, _URL_REFERENCE):
+        for owner, name, number in pattern.findall(text):
+            slug = f"{owner}/{name}"
+            if slug.casefold() != repository.casefold():
+                found.setdefault((slug.casefold(), int(number)), f"{slug}#{int(number)}")
+    return tuple(found[key] for key in sorted(found))
 
 
 def find_closing_references(text: str, repository: str, own_number: int) -> tuple[int, ...]:
@@ -65,7 +79,7 @@ def find_closing_references(text: str, repository: str, own_number: int) -> tupl
 
 
 class IssueLinkRule:
-    """Reports whether the pull request points at an issue in this repository."""
+    """Reports whether the pull request points at an issue, here or elsewhere."""
 
     rule_id = "R1"
     title = "Linked issue"
@@ -86,13 +100,15 @@ class IssueLinkRule:
         text = strip_code(f"{facts.title}\n{facts.body}")
         if options.get("require_closing_keyword", False):
             numbers = find_closing_references(text, facts.repository, facts.number)
+            external: tuple[str, ...] = ()
             missing = "no closing keyword and issue reference"
         else:
             numbers = find_references(text, facts.repository, facts.number)
+            external = find_external_references(text, facts.repository)
             missing = "no issue reference"
 
-        if numbers:
-            listed = ", ".join(f"#{number}" for number in numbers)
+        if numbers or external:
+            listed = ", ".join([*(f"#{number}" for number in numbers), *external])
             return Signal(self.rule_id, self.title, Outcome.PRESENT, f"references {listed}")
 
         return Signal(

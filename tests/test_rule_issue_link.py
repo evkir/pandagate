@@ -2,7 +2,12 @@
 
 from pandagate.facts import PullRequestFacts
 from pandagate.rules.base import Outcome
-from pandagate.rules.issue_link import RULE, find_references, strip_code
+from pandagate.rules.issue_link import (
+    RULE,
+    find_external_references,
+    find_references,
+    strip_code,
+)
 
 
 def _facts(title: str = "", body: str = "", *, association: str = "NONE") -> PullRequestFacts:
@@ -41,11 +46,11 @@ def test_full_url_for_this_repository_counts() -> None:
     assert RULE.evaluate(_facts(body=body), {}).outcome is Outcome.PRESENT
 
 
-def test_full_url_for_another_repository_does_not_count() -> None:
+def test_full_url_for_another_repository_counts() -> None:
     body = "inspired by https://github.com/other/project/issues/99"
     signal = RULE.evaluate(_facts(body=body), {})
-    assert signal.outcome is Outcome.ABSENT
-    assert signal.question is not None
+    assert signal.outcome is Outcome.PRESENT
+    assert signal.detail == "references other/project#99"
 
 
 def test_reference_inside_a_fenced_code_block_does_not_count() -> None:
@@ -123,3 +128,31 @@ def test_closing_keyword_accepts_a_qualified_reference() -> None:
 
 def test_own_number_qualified_with_this_repository_is_not_a_link() -> None:
     assert RULE.evaluate(_facts(body="see evkir/pandagate#412"), {}).outcome is Outcome.ABSENT
+
+
+def test_reference_qualified_with_another_repository_counts() -> None:
+    signal = RULE.evaluate(_facts(body="Fixes astral-sh/ty#1234"), {})
+    assert signal.outcome is Outcome.PRESENT
+    assert signal.detail == "references astral-sh/ty#1234"
+
+
+def test_external_references_follow_own_numbers_and_are_listed_once() -> None:
+    body = "closes #9, see Other/Project#3 and https://github.com/other/project/issues/3"
+    assert RULE.evaluate(_facts(body=body), {}).detail == "references #9, Other/Project#3"
+
+
+def test_own_number_in_another_repository_is_a_link() -> None:
+    assert RULE.evaluate(_facts(body="port of other/project#412"), {}).outcome is Outcome.PRESENT
+
+
+def test_external_reference_inside_inline_code_does_not_count() -> None:
+    assert RULE.evaluate(_facts(body="run `other/project#3`"), {}).outcome is Outcome.ABSENT
+
+
+def test_a_longer_path_is_not_a_qualified_reference() -> None:
+    assert RULE.evaluate(_facts(body="see src/a/b#3"), {}).outcome is Outcome.ABSENT
+
+
+def test_find_external_references_orders_and_deduplicates() -> None:
+    text = "a/b#2 a/b#1 A/B#2 evkir/pandagate#7"
+    assert find_external_references(text, "evkir/pandagate") == ("a/b#1", "a/b#2")
