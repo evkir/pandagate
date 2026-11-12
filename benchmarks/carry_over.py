@@ -1,8 +1,12 @@
-"""Carry the hand labels of the baseline over to a later run of the same sample.
+"""Carry the hand labels of one run over to a later run of the same sample.
 
 Run from the repository root:
 
     python -m benchmarks.carry_over
+
+Without arguments the labels of the baseline go to the second run. A later
+run takes its labels from the run before it, and all four files are named
+with --base-results, --base-labels, --results and --output.
 
 A signal that is ABSENT in both runs with the same detail is the same
 observation about the same pull request, so its label still stands. An
@@ -11,9 +15,10 @@ is listed and has to be checked by hand. Labels of signals that are no
 longer ABSENT are left behind.
 """
 
+import argparse
 import json
 import sys
-from collections.abc import Mapping
+from collections.abc import Callable, Mapping, Sequence
 from pathlib import Path
 from typing import Any
 
@@ -84,5 +89,36 @@ def main(
     return 0
 
 
+def cli(argv: Sequence[str] | None = None, *, run: Callable[..., int] = main) -> int:
+    """Parse the command line: which run hands its labels to which."""
+    parser = argparse.ArgumentParser(
+        prog="python -m benchmarks.carry_over",
+        description="Carry hand labels over to a later run of the same sample.",
+    )
+    parser.add_argument(
+        "--base-results",
+        type=Path,
+        default=RESULTS_PATH,
+        help="outcomes of the run that is already labelled",
+    )
+    parser.add_argument("--base-labels", type=Path, default=LABELS_PATH, help="labels of that run")
+    parser.add_argument(
+        "--results", type=Path, default=TUNED_RESULTS_PATH, help="outcomes of the later run"
+    )
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=TUNED_LABELS_PATH,
+        help="file to write the labels of the later run to; it must not exist yet",
+    )
+    arguments = parser.parse_args(argv)
+    return run(
+        base_results_path=arguments.base_results,
+        base_labels_path=arguments.base_labels,
+        later_results_path=arguments.results,
+        later_labels_path=arguments.output,
+    )
+
+
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(cli())
