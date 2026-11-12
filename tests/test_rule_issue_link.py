@@ -107,3 +107,19 @@ def test_strip_code_removes_both_code_forms() -> None:
 def test_find_references_is_case_insensitive_about_the_repository() -> None:
     body = "https://github.com/EvKir/PandaGate/issues/5"
     assert find_references(body, "evkir/pandagate", 412) == (5,)
+
+
+def test_reference_qualified_with_this_repository_counts() -> None:
+    signal = RULE.evaluate(_facts(body="Closes EvKir/PandaGate#411"), {})
+    assert signal.outcome is Outcome.PRESENT
+    assert signal.detail == "references #411"
+
+
+def test_closing_keyword_accepts_a_qualified_reference() -> None:
+    options = {"require_closing_keyword": True}
+    body = "Closes evkir/pandagate#411"
+    assert RULE.evaluate(_facts(body=body), options).outcome is Outcome.PRESENT
+
+
+def test_own_number_qualified_with_this_repository_is_not_a_link() -> None:
+    assert RULE.evaluate(_facts(body="see evkir/pandagate#412"), {}).outcome is Outcome.ABSENT

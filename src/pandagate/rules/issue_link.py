@@ -20,8 +20,10 @@ _GH_REFERENCE = re.compile(r"(?<![\w/])GH-(\d+)\b", re.IGNORECASE)
 _URL_REFERENCE = re.compile(
     r"https?://github\.com/([\w.-]+)/([\w.-]+)/(?:issues|pull)/(\d+)\b", re.IGNORECASE
 )
+_REPOSITORY = r"([A-Za-z0-9][A-Za-z0-9-]{0,38})/([\w.-]{1,100})"
+_QUALIFIED_REFERENCE = re.compile(rf"(?<![\w./-]){_REPOSITORY}#(\d+)\b")
 _CLOSING_KEYWORD = re.compile(
-    r"\b(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s+#(\d+)\b", re.IGNORECASE
+    rf"\b(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s+(?:{_REPOSITORY})?#(\d+)\b", re.IGNORECASE
 )
 
 
@@ -40,16 +42,24 @@ def find_references(text: str, repository: str, own_number: int) -> tuple[int, .
     found: set[int] = set()
     for pattern in (_HASH_REFERENCE, _GH_REFERENCE):
         found.update(int(match.group(1)) for match in pattern.finditer(text))
-    for owner, name, number in _URL_REFERENCE.findall(text):
-        if f"{owner}/{name}".casefold() == repository.casefold():
-            found.add(int(number))
+    for pattern in (_QUALIFIED_REFERENCE, _URL_REFERENCE):
+        for owner, name, number in pattern.findall(text):
+            if f"{owner}/{name}".casefold() == repository.casefold():
+                found.add(int(number))
     found.discard(own_number)
     return tuple(sorted(found))
 
 
-def find_closing_references(text: str, own_number: int) -> tuple[int, ...]:
-    """Numbers tied to a closing keyword, such as "fixes #411"."""
-    found = {int(number) for number in _CLOSING_KEYWORD.findall(text)}
+def find_closing_references(text: str, repository: str, own_number: int) -> tuple[int, ...]:
+    """Numbers tied to a closing keyword, such as "fixes #411".
+
+    The number may be qualified with this repository, as in
+    "closes evkir/pandagate#411".
+    """
+    found: set[int] = set()
+    for owner, name, number in _CLOSING_KEYWORD.findall(text):
+        if not owner or f"{owner}/{name}".casefold() == repository.casefold():
+            found.add(int(number))
     found.discard(own_number)
     return tuple(sorted(found))
 
@@ -75,7 +85,7 @@ class IssueLinkRule:
 
         text = strip_code(f"{facts.title}\n{facts.body}")
         if options.get("require_closing_keyword", False):
-            numbers = find_closing_references(text, facts.number)
+            numbers = find_closing_references(text, facts.repository, facts.number)
             missing = "no closing keyword and issue reference"
         else:
             numbers = find_references(text, facts.repository, facts.number)
