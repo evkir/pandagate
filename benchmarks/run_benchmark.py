@@ -1,20 +1,25 @@
-"""Score the frozen sample with the shipped rules and write results.json.
+"""Score the frozen sample with the shipped rules and write the outcomes.
 
 Run from the repository root:
 
-    python -m benchmarks.run_benchmark
+    python -m benchmarks.run_benchmark --output benchmarks/results-tuned.json
+
+Without --output the outcomes go to results.json, the baseline run. A file
+that already exists is never overwritten: every published run keeps its
+own file.
 
 Answers of the API are kept in benchmarks/.cache, so a second run sends no
 requests. The run refuses to start when src has uncommitted changes: the
 numbers have to belong to a commit.
 """
 
+import argparse
 import hashlib
 import json
 import os
 import subprocess
 import sys
-from collections.abc import Callable, Mapping
+from collections.abc import Callable, Mapping, Sequence
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -174,5 +179,24 @@ def main(
     return 0
 
 
+def cli(argv: Sequence[str] | None = None, *, run: Callable[..., int] = main) -> int:
+    """Parse the command line and refuse to write over a published run."""
+    parser = argparse.ArgumentParser(
+        prog="python -m benchmarks.run_benchmark",
+        description="Score the frozen sample with the shipped rules.",
+    )
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=RESULTS_PATH,
+        help="file to write the outcomes to; it must not exist yet",
+    )
+    arguments = parser.parse_args(argv)
+    if arguments.output.exists():
+        _say(f"error: {arguments.output} already exists; a published run is never overwritten")
+        return 1
+    return run(results_path=arguments.output)
+
+
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(cli())
