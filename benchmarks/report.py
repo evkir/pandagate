@@ -1,10 +1,11 @@
 """The published results of a benchmark run: metrics A, B and C in one file.
 
 RESULTS.md is generated and never edited by hand: the baseline part from
-results.json and labels.json, and after it the section of the second run
-from results-tuned.json and labels-tuned.json. Adding the second run does
-not change a byte of the baseline part. Metric C is computed only when
-every ABSENT signal of a run is labelled.
+results.json and labels.json, and after it one section per later run. The
+second run is read from results-tuned.json and labels-tuned.json, the
+third from results-defaults.json and labels-defaults.json. Adding a run
+does not change a byte of what was published before it. Metric C is
+computed only when every ABSENT signal of a run is labelled.
 """
 
 import json
@@ -29,6 +30,8 @@ RESULTS_PATH = LABELS_PATH.with_name("results.json")
 REPORT_PATH = LABELS_PATH.with_name("RESULTS.md")
 RERUN_RESULTS_PATH = LABELS_PATH.with_name("results-tuned.json")
 RERUN_LABELS_PATH = LABELS_PATH.with_name("labels-tuned.json")
+DEFAULTS_RESULTS_PATH = LABELS_PATH.with_name("results-defaults.json")
+DEFAULTS_LABELS_PATH = LABELS_PATH.with_name("labels-defaults.json")
 CRITERION = 0.05
 
 
@@ -267,6 +270,96 @@ def render_rerun(
     return "\n".join(lines) + "\n"
 
 
+def _details(results: Mapping[str, Any]) -> dict[Key, str]:
+    return {
+        (str(pull["url"]), str(signal["rule_id"])): str(signal["detail"])
+        for pull in results["pull_requests"]
+        for signal in pull["signals"]
+    }
+
+
+def _scope_reason(detail: str) -> str:
+    if detail == "no logic files changed":
+        return detail
+    if "below the" in detail:
+        return "logic below the threshold"
+    return "other"
+
+
+def render_defaults(
+    previous_results: Mapping[str, Any],
+    previous_labels: Labels,
+    results: Mapping[str, Any],
+    labels: Labels,
+) -> str:
+    """The section of RESULTS.md for the run after the defaults were made quieter."""
+    before, after = _outcomes(previous_results), _outcomes(results)
+    if list(before) != list(after):
+        raise LabelError("the third run did not score the same signals as the second run")
+    details = _details(results)
+    previous_by_key = {label.key: label for label in previous_labels.labels}
+    changed = [key for key in before if before[key] != after[key]]
+    silenced = [key for key in changed if before[key] == "ABSENT"]
+    wrong = sum(previous_by_key[key].verdict == "wrong" for key in silenced)
+    correct = len(silenced) - wrong
+    appeared = sum(after[key] == "ABSENT" for key in changed)
+    other = len(changed) - len(silenced) - appeared
+    by_hand = sum(previous_by_key.get(label.key) != label for label in labels.labels)
+    summary, previous_summary = results["summary"], previous_results["summary"]
+    total, commented = int(summary["pull_requests"]), int(summary["commented"])
+    previous_total = int(previous_summary["pull_requests"])
+    previous_commented = int(previous_summary["commented"])
+    reasons = Counter(_scope_reason(details[key]) for key in silenced)
+    reason_rows = sorted(reasons.items(), key=lambda item: (-item[1], item[0]))
+    rows = [
+        [
+            f"[{_slug(key[0])}]({key[0]})",
+            key[1],
+            f"`{after[key]}`",
+            f"`{details[key]}`",
+            previous_by_key[key].verdict,
+        ]
+        for key in silenced
+    ]
+    lines = [
+        "## Third run, with quieter defaults",
+        "",
+        "Generated from `results-defaults.json` and `labels-defaults.json`.",
+        "",
+        *_run_facts(results),
+        "- **The default was chosen on this sample.** Between the second run and this one,",
+        "  R1 was taken out of scope for pull requests that change fewer than five lines of",
+        "  logic. The threshold was picked by looking at where the second run asked its",
+        "  questions, so the comment rate below is not a measurement on pull requests the",
+        "  rules have not seen: that takes a fresh sample.",
+        "- The change lowers the comment rate by asking less. It corrects no wrong signal, and",
+        "  every question that is no longer asked is listed below with the label it had.",
+        "- A label is carried over from the second run when the signal is `ABSENT` in both",
+        "  runs with the same detail (`python -m benchmarks.carry_over`). Signals labelled by",
+        f"  hand for this run: {by_hand}.",
+        "",
+        "### Against the second run",
+        "",
+        f"- Comment rate: {commented} of {total} ({_percent(commented, total)}), "
+        f"second run {previous_commented} of {previous_total} "
+        f"({_percent(previous_commented, previous_total)}).",
+        f"- Labelled correct in the second run and no longer `ABSENT`: {correct}. "
+        "Such a question was right to ask and is not asked any more.",
+        f"- Labelled wrong in the second run and no longer `ABSENT`: {wrong}.",
+        f"- `ABSENT` only in this run: {appeared}.",
+        f"- Changed between outcomes other than `ABSENT`: {other}.",
+        "",
+        "### Questions no longer asked",
+        "",
+        *_table(["Why out of scope", "Signals"], reason_rows),
+        "",
+        *_table(["Pull request", "Rule", "This run", "Detail", "Second-run label"], rows),
+        "",
+        *_metrics(results, labels),
+    ]
+    return "\n".join(lines) + "\n"
+
+
 def main(
     *,
     results_path: Path = RESULTS_PATH,
@@ -274,6 +367,8 @@ def main(
     report_path: Path = REPORT_PATH,
     rerun_results_path: Path | None = None,
     rerun_labels_path: Path | None = None,
+    defaults_results_path: Path | None = None,
+    defaults_labels_path: Path | None = None,
 ) -> int:
     """Write RESULTS.md, or say why it cannot be written."""
     try:
@@ -282,11 +377,21 @@ def main(
         text = render(results, labels)
         errors = error_summary(results, labels)
         rerun = None
+        third = None
+        if defaults_results_path is not None and rerun_results_path is None:
+            raise ValueError("the third run is reported after the second, which is not given")
         if rerun_results_path is not None and rerun_labels_path is not None:
             rerun_results = json.loads(rerun_results_path.read_text(encoding="utf-8"))
             rerun_labels = load_labels(rerun_labels_path)
             text += "\n" + render_rerun(results, labels, rerun_results, rerun_labels)
             rerun = error_summary(rerun_results, rerun_labels)
+            if defaults_results_path is not None and defaults_labels_path is not None:
+                defaults_results = json.loads(defaults_results_path.read_text(encoding="utf-8"))
+                defaults_labels = load_labels(defaults_labels_path)
+                text += "\n" + render_defaults(
+                    rerun_results, rerun_labels, defaults_results, defaults_labels
+                )
+                third = error_summary(defaults_results, defaults_labels)
     except (OSError, ValueError, KeyError) as error:
         print(f"report: {error}", file=sys.stderr)
         return 1
@@ -296,10 +401,18 @@ def main(
     if rerun is not None:
         again = _percent(rerun["wrong"], rerun["absent"])
         print(f"report: second run C = {rerun['wrong']}/{rerun['absent']} ({again})")
+    if third is not None:
+        last = _percent(third["wrong"], third["absent"])
+        print(f"report: third run C = {third['wrong']}/{third['absent']} ({last})")
     return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(
-        main(rerun_results_path=RERUN_RESULTS_PATH, rerun_labels_path=RERUN_LABELS_PATH)
+        main(
+            rerun_results_path=RERUN_RESULTS_PATH,
+            rerun_labels_path=RERUN_LABELS_PATH,
+            defaults_results_path=DEFAULTS_RESULTS_PATH,
+            defaults_labels_path=DEFAULTS_LABELS_PATH,
+        )
     )

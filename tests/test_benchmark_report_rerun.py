@@ -49,7 +49,8 @@ def test_the_baseline_part_is_the_text_first_published() -> None:
 
 
 def test_the_published_report_is_the_baseline_and_then_the_second_run() -> None:
-    assert REPORT_PATH.read_text(encoding="utf-8") == _baseline() + "\n" + _section()
+    published = REPORT_PATH.read_text(encoding="utf-8")
+    assert published.startswith(_baseline() + "\n" + _section())
 
 
 def test_metric_c_of_the_second_run_is_pinned() -> None:
@@ -98,7 +99,7 @@ def test_main_writes_both_parts(tmp_path: Path, capsys: pytest.CaptureFixture[st
         rerun_labels_path=RERUN_LABELS_PATH,
     )
     assert code == 0
-    assert target.read_text(encoding="utf-8") == REPORT_PATH.read_text(encoding="utf-8")
+    assert target.read_text(encoding="utf-8") == _baseline() + "\n" + _section()
     assert "report: second run C = 0/101 (0.0%)" in capsys.readouterr().out
 
 
