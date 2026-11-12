@@ -6,8 +6,9 @@ from typing import Any
 
 import pytest
 
-from benchmarks.carry_over import carry_over, main
-from benchmarks.labels import Label, LabelError, Labels, dump_labels, load_labels
+from benchmarks.carry_over import TUNED_LABELS_PATH, TUNED_RESULTS_PATH, carry_over, cli, main
+from benchmarks.labels import LABELS_PATH, Label, LabelError, Labels, dump_labels, load_labels
+from benchmarks.run_benchmark import RESULTS_PATH
 
 FIRST = "https://github.com/octo/demo/pull/1"
 SECOND = "https://github.com/octo/demo/pull/2"
@@ -117,3 +118,43 @@ def test_main_fails_without_the_later_results(tmp_path: Path) -> None:
     paths["later_results_path"].unlink()
     assert main(**paths) == 1
     assert not paths["later_labels_path"].exists()
+
+
+def test_cli_without_arguments_carries_the_baseline_to_the_second_run() -> None:
+    seen: dict[str, Path] = {}
+
+    def run(**paths: Path) -> int:
+        seen.update(paths)
+        return 0
+
+    assert cli([], run=run) == 0
+    assert seen == {
+        "base_results_path": RESULTS_PATH,
+        "base_labels_path": LABELS_PATH,
+        "later_results_path": TUNED_RESULTS_PATH,
+        "later_labels_path": TUNED_LABELS_PATH,
+    }
+
+
+def test_cli_takes_every_file_from_the_command_line(tmp_path: Path) -> None:
+    paths = _write(tmp_path, _run("bbb", {(FIRST, "R1"): ASKED}))
+    target = tmp_path / "labels-third.json"
+    argv = [
+        "--base-results",
+        str(paths["base_results_path"]),
+        "--base-labels",
+        str(paths["base_labels_path"]),
+        "--results",
+        str(paths["later_results_path"]),
+        "--output",
+        str(target),
+    ]
+    assert cli(argv) == 0
+    written = load_labels(target)
+    assert written.pandagate_commit == "bbb"
+    assert _keys(written) == [(FIRST, "R1")]
+    assert not paths["later_labels_path"].exists()
+
+
+def test_cli_passes_the_exit_code_of_the_run_through() -> None:
+    assert cli([], run=lambda **paths: 1) == 1

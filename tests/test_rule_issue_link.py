@@ -1,16 +1,27 @@
 """Tests for R1, the linked issue rule."""
 
-from pandagate.facts import PullRequestFacts
+from pandagate.facts import ChangedFile, PullRequestFacts
 from pandagate.rules.base import Outcome
 from pandagate.rules.issue_link import (
+    DEFAULT_MIN_LOGIC_LINES,
     RULE,
     find_external_references,
     find_references,
     strip_code,
 )
+from pandagate.rules.tests_with_code import DEFAULT_MIN_LOGIC_LINES as R2_MIN_LOGIC_LINES
+
+_LOGIC = (ChangedFile("src/pandagate/score.py", "modified", 9, 1),)
 
 
-def _facts(title: str = "", body: str = "", *, association: str = "NONE") -> PullRequestFacts:
+def _facts(
+    title: str = "",
+    body: str = "",
+    *,
+    association: str = "NONE",
+    files: tuple[ChangedFile, ...] = _LOGIC,
+    truncated: bool = False,
+) -> PullRequestFacts:
     return PullRequestFacts(
         repository="evkir/pandagate",
         number=412,
@@ -22,7 +33,8 @@ def _facts(title: str = "", body: str = "", *, association: str = "NONE") -> Pul
         commits=1,
         additions=10,
         deletions=1,
-        changed_files=(),
+        changed_files=files,
+        files_truncated=truncated,
     )
 
 
@@ -179,3 +191,81 @@ def test_required_closing_keyword_ignores_plain_mentions_and_own_number() -> Non
     ]
     for body in bodies:
         assert RULE.evaluate(_facts(body=body), options).outcome is Outcome.ABSENT
+
+
+def test_change_without_logic_files_is_out_of_scope() -> None:
+    files = (ChangedFile("docs/guide.md", "modified", 40, 2),)
+    signal = RULE.evaluate(_facts(files=files), {})
+    assert signal.outcome is Outcome.NOT_APPLICABLE
+    assert signal.detail == "no logic files changed"
+
+
+def test_pull_request_without_files_is_out_of_scope() -> None:
+    signal = RULE.evaluate(_facts(files=()), {})
+    assert signal.outcome is Outcome.NOT_APPLICABLE
+    assert signal.detail == "no logic files changed"
+
+
+def test_logic_below_the_threshold_is_out_of_scope() -> None:
+    files = (ChangedFile("src/pandagate/score.py", "modified", 3, 1),)
+    signal = RULE.evaluate(_facts(files=files), {})
+    assert signal.outcome is Outcome.NOT_APPLICABLE
+    assert signal.detail == "4 line(s) of logic changed, below the 5 line threshold"
+
+
+def test_logic_at_the_threshold_is_in_scope() -> None:
+    files = (ChangedFile("src/pandagate/score.py", "modified", 4, 1),)
+    signal = RULE.evaluate(_facts(files=files), {})
+    assert signal.outcome is Outcome.ABSENT
+
+
+def test_small_change_is_out_of_scope_even_with_a_link() -> None:
+    files = (ChangedFile("src/pandagate/score.py", "modified", 1, 1),)
+    signal = RULE.evaluate(_facts(body="Closes #411", files=files), {})
+    assert signal.outcome is Outcome.NOT_APPLICABLE
+
+
+def test_test_files_do_not_count_as_logic() -> None:
+    files = (ChangedFile("tests/test_score.py", "modified", 50, 0),)
+    signal = RULE.evaluate(_facts(files=files), {})
+    assert signal.outcome is Outcome.NOT_APPLICABLE
+    assert signal.detail == "no logic files changed"
+
+
+def test_pure_rename_does_not_count_as_logic() -> None:
+    files = (ChangedFile("src/pandagate/scoring.py", "renamed", 0, 0),)
+    signal = RULE.evaluate(_facts(files=files), {})
+    assert signal.outcome is Outcome.NOT_APPLICABLE
+    assert signal.detail == "no logic files changed"
+
+
+def test_threshold_is_configurable() -> None:
+    signal = RULE.evaluate(_facts(), {"min_logic_lines": 20})
+    assert signal.outcome is Outcome.NOT_APPLICABLE
+    assert signal.detail == "10 line(s) of logic changed, below the 20 line threshold"
+
+
+def test_zero_threshold_asks_about_every_pull_request() -> None:
+    signal = RULE.evaluate(_facts(files=()), {"min_logic_lines": 0})
+    assert signal.outcome is Outcome.ABSENT
+
+
+def test_truncated_file_list_below_the_threshold_is_unknown() -> None:
+    signal = RULE.evaluate(_facts(files=(), truncated=True), {})
+    assert signal.outcome is Outcome.UNKNOWN
+    assert "truncated" in signal.detail
+
+
+def test_truncated_file_list_with_enough_logic_is_read() -> None:
+    signal = RULE.evaluate(_facts(body="Closes #411", truncated=True), {})
+    assert signal.outcome is Outcome.PRESENT
+
+
+def test_maintainer_is_out_of_scope_before_size_is_read() -> None:
+    signal = RULE.evaluate(_facts(association="OWNER", files=()), {})
+    assert signal.outcome is Outcome.NOT_APPLICABLE
+    assert signal.detail == "author is a maintainer of this repository"
+
+
+def test_both_rules_share_the_default_threshold() -> None:
+    assert DEFAULT_MIN_LOGIC_LINES == R2_MIN_LOGIC_LINES

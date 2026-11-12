@@ -1,7 +1,13 @@
 """R1 - is an issue linked from the pull request.
 
-The rule reads the title and the body only. It does not fetch the issue,
+The rule reads the title and the body, and the list of changed files to
+see how much logic the pull request touches. It does not fetch the issue,
 and it does not judge whether the issue is a good one.
+
+A change that touches less logic than min_logic_lines is out of scope: a
+typo, a documentation page or a dependency bump rarely has an issue behind
+it, and asking for one there is noise. Setting min_logic_lines to 0 makes
+the rule ask about every pull request.
 """
 
 import re
@@ -9,9 +15,11 @@ from collections.abc import Mapping
 from typing import Any
 
 from pandagate.facts import PullRequestFacts
+from pandagate.paths import PathKind, classify
 from pandagate.rules.base import Outcome, Signal, register
 
 MAINTAINER_ASSOCIATIONS = frozenset({"OWNER", "MEMBER", "COLLABORATOR"})
+DEFAULT_MIN_LOGIC_LINES = 5
 
 _FENCED_CODE = re.compile(r"```.*?```|~~~.*?~~~", re.DOTALL)
 _INLINE_CODE = re.compile(r"`[^`\n]*`")
@@ -108,6 +116,29 @@ class IssueLinkRule:
                 Outcome.NOT_APPLICABLE,
                 "author is a maintainer of this repository",
             )
+
+        minimum = int(options.get("min_logic_lines", DEFAULT_MIN_LOGIC_LINES))
+        logic = [
+            f
+            for f in facts.changed_files
+            if not f.is_pure_rename and classify(f.path) is PathKind.LOGIC
+        ]
+        logic_lines = sum(f.additions + f.deletions for f in logic)
+        if logic_lines < minimum:
+            if facts.files_truncated:
+                return Signal(
+                    self.rule_id,
+                    self.title,
+                    Outcome.UNKNOWN,
+                    "the file list was truncated, so the size of the change cannot be read in full",
+                )
+            if logic:
+                detail = (
+                    f"{logic_lines} line(s) of logic changed, below the {minimum} line threshold"
+                )
+            else:
+                detail = "no logic files changed"
+            return Signal(self.rule_id, self.title, Outcome.NOT_APPLICABLE, detail)
 
         text = strip_code(f"{facts.title}\n{facts.body}")
         if options.get("require_closing_keyword", False):

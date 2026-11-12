@@ -164,3 +164,122 @@ The criterion is at most 5%: **met**.
 ### Wrong signals
 
 No `ABSENT` signal was labelled wrong.
+
+## Third run, with quieter defaults
+
+Generated from `results-defaults.json` and `labels-defaults.json`.
+
+- PandaGate commit: `4b1c36c639b280633d0f6a97d5015277047ba3ed`
+- Sample taken at: 2026-11-11T08:39:04Z
+- Run at: 2026-11-12T16:39:52Z
+- Pull requests: 200
+- **The default was chosen on this sample.** Between the second run and this one,
+  R1 was taken out of scope for pull requests that change fewer than five lines of
+  logic. The threshold was picked by looking at where the second run asked its
+  questions, so the comment rate below is not a measurement on pull requests the
+  rules have not seen: that takes a fresh sample.
+- The change lowers the comment rate by asking less. It corrects no wrong signal, and
+  every question that is no longer asked is listed below with the label it had.
+- A label is carried over from the second run when the signal is `ABSENT` in both
+  runs with the same detail (`python -m benchmarks.carry_over`). Signals labelled by
+  hand for this run: 0.
+
+### Against the second run
+
+- Comment rate: 50 of 200 (25.0%), second run 90 of 200 (45.0%).
+- Labelled correct in the second run and no longer `ABSENT`: 40. Such a question was right to ask and is not asked any more.
+- Labelled wrong in the second run and no longer `ABSENT`: 0.
+- `ABSENT` only in this run: 0.
+- Changed between outcomes other than `ABSENT`: 39.
+
+### Questions no longer asked
+
+| Why out of scope | Signals |
+| --- | --- |
+| logic below the threshold | 20 |
+| no logic files changed | 20 |
+
+| Pull request | Rule | This run | Detail | Second-run label |
+| --- | --- | --- | --- | --- |
+| [pytest-dev/pytest#14977](https://github.com/pytest-dev/pytest/pull/14977) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [pytest-dev/pytest#14967](https://github.com/pytest-dev/pytest/pull/14967) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [pandas-dev/pandas#69985](https://github.com/pandas-dev/pandas/pull/69985) | R1 | `NOT_APPLICABLE` | `3 line(s) of logic changed, below the 5 line threshold` | correct |
+| [pandas-dev/pandas#69916](https://github.com/pandas-dev/pandas/pull/69916) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [astral-sh/ruff#29019](https://github.com/astral-sh/ruff/pull/29019) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [astral-sh/ruff#28907](https://github.com/astral-sh/ruff/pull/28907) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [astral-sh/ruff#28906](https://github.com/astral-sh/ruff/pull/28906) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [tokio-rs/tokio#8521](https://github.com/tokio-rs/tokio/pull/8521) | R1 | `NOT_APPLICABLE` | `2 line(s) of logic changed, below the 5 line threshold` | correct |
+| [tokio-rs/tokio#8499](https://github.com/tokio-rs/tokio/pull/8499) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [tokio-rs/tokio#8488](https://github.com/tokio-rs/tokio/pull/8488) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [vitejs/vite#23582](https://github.com/vitejs/vite/pull/23582) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [vitejs/vite#23554](https://github.com/vitejs/vite/pull/23554) | R1 | `NOT_APPLICABLE` | `2 line(s) of logic changed, below the 5 line threshold` | correct |
+| [vitejs/vite#23532](https://github.com/vitejs/vite/pull/23532) | R1 | `NOT_APPLICABLE` | `2 line(s) of logic changed, below the 5 line threshold` | correct |
+| [vitejs/vite#23525](https://github.com/vitejs/vite/pull/23525) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [withastro/astro#18179](https://github.com/withastro/astro/pull/18179) | R1 | `NOT_APPLICABLE` | `4 line(s) of logic changed, below the 5 line threshold` | correct |
+| [withastro/astro#18139](https://github.com/withastro/astro/pull/18139) | R1 | `NOT_APPLICABLE` | `2 line(s) of logic changed, below the 5 line threshold` | correct |
+| [withastro/astro#18114](https://github.com/withastro/astro/pull/18114) | R1 | `NOT_APPLICABLE` | `3 line(s) of logic changed, below the 5 line threshold` | correct |
+| [withastro/astro#18038](https://github.com/withastro/astro/pull/18038) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [withastro/astro#18034](https://github.com/withastro/astro/pull/18034) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [prometheus/prometheus#19868](https://github.com/prometheus/prometheus/pull/19868) | R1 | `NOT_APPLICABLE` | `3 line(s) of logic changed, below the 5 line threshold` | correct |
+| [prometheus/prometheus#19858](https://github.com/prometheus/prometheus/pull/19858) | R1 | `NOT_APPLICABLE` | `2 line(s) of logic changed, below the 5 line threshold` | correct |
+| [prometheus/prometheus#19843](https://github.com/prometheus/prometheus/pull/19843) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [prometheus/prometheus#19838](https://github.com/prometheus/prometheus/pull/19838) | R1 | `NOT_APPLICABLE` | `1 line(s) of logic changed, below the 5 line threshold` | correct |
+| [prometheus/prometheus#19828](https://github.com/prometheus/prometheus/pull/19828) | R1 | `NOT_APPLICABLE` | `4 line(s) of logic changed, below the 5 line threshold` | correct |
+| [prometheus/prometheus#19826](https://github.com/prometheus/prometheus/pull/19826) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [cli/cli#14474](https://github.com/cli/cli/pull/14474) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [cli/cli#14461](https://github.com/cli/cli/pull/14461) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [cli/cli#14363](https://github.com/cli/cli/pull/14363) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [cli/cli#14343](https://github.com/cli/cli/pull/14343) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [cli/cli#14141](https://github.com/cli/cli/pull/14141) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [cli/cli#14030](https://github.com/cli/cli/pull/14030) | R1 | `NOT_APPLICABLE` | `no logic files changed` | correct |
+| [neovim/neovim#42186](https://github.com/neovim/neovim/pull/42186) | R1 | `NOT_APPLICABLE` | `4 line(s) of logic changed, below the 5 line threshold` | correct |
+| [neovim/neovim#42184](https://github.com/neovim/neovim/pull/42184) | R1 | `NOT_APPLICABLE` | `4 line(s) of logic changed, below the 5 line threshold` | correct |
+| [neovim/neovim#42183](https://github.com/neovim/neovim/pull/42183) | R1 | `NOT_APPLICABLE` | `4 line(s) of logic changed, below the 5 line threshold` | correct |
+| [neovim/neovim#42117](https://github.com/neovim/neovim/pull/42117) | R1 | `NOT_APPLICABLE` | `2 line(s) of logic changed, below the 5 line threshold` | correct |
+| [godotengine/godot#124007](https://github.com/godotengine/godot/pull/124007) | R1 | `NOT_APPLICABLE` | `1 line(s) of logic changed, below the 5 line threshold` | correct |
+| [godotengine/godot#123990](https://github.com/godotengine/godot/pull/123990) | R1 | `NOT_APPLICABLE` | `4 line(s) of logic changed, below the 5 line threshold` | correct |
+| [godotengine/godot#123975](https://github.com/godotengine/godot/pull/123975) | R1 | `NOT_APPLICABLE` | `2 line(s) of logic changed, below the 5 line threshold` | correct |
+| [godotengine/godot#123954](https://github.com/godotengine/godot/pull/123954) | R1 | `NOT_APPLICABLE` | `4 line(s) of logic changed, below the 5 line threshold` | correct |
+| [godotengine/godot#123945](https://github.com/godotengine/godot/pull/123945) | R1 | `NOT_APPLICABLE` | `2 line(s) of logic changed, below the 5 line threshold` | correct |
+
+### A. Comment rate
+
+50 of 200 pull requests (25.0%) would have received a comment.
+
+### B. Per-rule rate
+
+| Rule | `ABSENT` | `PRESENT` | Rate | `NOT_APPLICABLE` | `UNKNOWN` |
+| --- | --- | --- | --- | --- | --- |
+| R1 | 30 | 91 | 24.8% | 79 | 0 |
+| R2 | 31 | 90 | 25.6% | 79 | 0 |
+| R3 | 0 | 162 | 0.0% | 38 | 0 |
+
+### C. Factual error rate
+
+0 of 61 `ABSENT` signals are wrong (0.0%).
+The criterion is at most 5%: **met**.
+
+| Rule | `ABSENT` checked | Wrong | Rate |
+| --- | --- | --- | --- |
+| R1 | 30 | 0 | 0.0% |
+| R2 | 31 | 0 | 0.0% |
+| R3 | 0 | 0 | n/a |
+
+### By repository
+
+| Repository | Pull requests with a comment | `ABSENT` signals | Wrong |
+| --- | --- | --- | --- |
+| pytest-dev/pytest | 0 | 0 | 0 |
+| pandas-dev/pandas | 1 | 1 | 0 |
+| astral-sh/ruff | 9 | 10 | 0 |
+| tokio-rs/tokio | 7 | 9 | 0 |
+| vitejs/vite | 3 | 4 | 0 |
+| withastro/astro | 5 | 5 | 0 |
+| prometheus/prometheus | 5 | 6 | 0 |
+| cli/cli | 2 | 3 | 0 |
+| neovim/neovim | 5 | 8 | 0 |
+| godotengine/godot | 13 | 15 | 0 |
+
+### Wrong signals
+
+No `ABSENT` signal was labelled wrong.
