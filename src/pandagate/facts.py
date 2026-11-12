@@ -5,18 +5,23 @@ module infers intent, quality or authorship.
 """
 
 from collections.abc import Mapping, Sequence
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Any
 
 
 @dataclass(frozen=True, slots=True)
 class ChangedFile:
-    """One file touched by a pull request."""
+    """One file touched by a pull request.
+
+    `patch` is the diff text GitHub reports for the file, or None when it
+    reports none - a binary file, or a diff too large to send inline.
+    """
 
     path: str
     status: str
     additions: int
     deletions: int
+    patch: str | None = field(default=None, repr=False)
 
     @property
     def top_dir(self) -> str:
@@ -68,6 +73,10 @@ def _as_str(value: Any) -> str:
     return value if isinstance(value, str) else ""
 
 
+def _as_optional_str(value: Any) -> str | None:
+    return value if isinstance(value, str) else None
+
+
 def changed_file_from_api(payload: Mapping[str, Any]) -> ChangedFile:
     """Build a ChangedFile from one entry of the pull request files endpoint."""
     return ChangedFile(
@@ -75,6 +84,7 @@ def changed_file_from_api(payload: Mapping[str, Any]) -> ChangedFile:
         status=_as_str(payload.get("status")),
         additions=_as_int(payload.get("additions")),
         deletions=_as_int(payload.get("deletions")),
+        patch=_as_optional_str(payload.get("patch")),
     )
 
 

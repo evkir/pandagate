@@ -56,7 +56,20 @@ META_EXTENSIONS = frozenset(
     {".toml", ".ini", ".cfg", ".yml", ".yaml", ".json", ".lock", ".editorconfig"}
 )
 
-TEST_PATH_MARKERS = frozenset({"test", "tests", "spec", "specs", "__tests__", "testdata"})
+TEST_PATH_MARKERS = frozenset(
+    {
+        "test",
+        "tests",
+        "testing",
+        "spec",
+        "specs",
+        "__tests__",
+        "testdata",
+        "mdtest",
+        "snapshots",
+        "__snapshots__",
+    }
+)
 DOCS_PATH_MARKERS = frozenset({"doc", "docs", "documentation", "man"})
 META_PATH_MARKERS = frozenset({".github", ".gitlab", ".circleci", ".idea", ".vscode"})
 
@@ -93,6 +106,8 @@ META_FILENAMES = frozenset(
 
 _TEST_NAME_PREFIXES = ("test_", "test-", "test.")
 _TEST_NAME_INFIXES = ("_test.", "-test.", ".test.", ".spec.", "_spec.")
+TEST_EXTENSIONS = frozenset({".snap"})
+TEST_SUPPORT_STEMS = frozenset({"testing"})
 
 
 class PathKind(StrEnum):
@@ -110,6 +125,11 @@ def _looks_like_a_test_name(name: str) -> bool:
     if lowered == "conftest.py":
         return True
     if lowered.startswith(_TEST_NAME_PREFIXES):
+        return True
+    suffix = PurePosixPath(lowered).suffix
+    if suffix in TEST_EXTENSIONS:
+        return True
+    if PurePosixPath(lowered).stem in TEST_SUPPORT_STEMS and suffix in LOGIC_EXTENSIONS:
         return True
     return any(infix in lowered for infix in _TEST_NAME_INFIXES)
 

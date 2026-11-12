@@ -78,3 +78,89 @@ The criterion is at most 5%: **not met**.
 | [tokio-rs/tokio#8505](https://github.com/tokio-rs/tokio/pull/8505) | R2 | inline-tests: #[test] added in two files under tokio/src/runtime/io |
 | [tokio-rs/tokio#8496](https://github.com/tokio-rs/tokio/pull/8496) | R2 | inline-tests: #[test] added in tokio/src/runtime/metrics/histogram/h2_histogram.rs |
 | [cli/cli#14191](https://github.com/cli/cli/pull/14191) | R1 | qualified-ref: Closes cli/cli#12839 in the description and in Development |
+
+## Second run, on the sample the rules were tuned on
+
+Generated from `results-tuned.json` and `labels-tuned.json`.
+
+- PandaGate commit: `68f02785832344a77be7b645f815493849c477ec`
+- Sample taken at: 2026-11-11T08:39:04Z
+- Run at: 2026-11-12T08:48:40Z
+- Pull requests: 200
+- **The rules were tuned on this sample.** The fixes made between the two runs were
+  written from the wrong signals of the baseline above. This run shows that those
+  errors are gone. It does not show how the rules do on pull requests they have not
+  seen: that takes a fresh sample.
+- A label is carried over from the baseline when the signal is `ABSENT` in both runs
+  with the same detail (`python -m benchmarks.carry_over`). Signals labelled by hand
+  for this run: 0.
+
+### Against the baseline
+
+- Comment rate: 90 of 200 (45.0%), baseline 100 of 200 (50.0%).
+- Labelled wrong in the baseline and no longer `ABSENT`: 17 of 17.
+- Labelled correct in the baseline and no longer `ABSENT`: 1. Such a question was right to ask and is not asked any more.
+- `ABSENT` only in this run: 0.
+
+| Pull request | Rule | Baseline | This run | Baseline label |
+| --- | --- | --- | --- | --- |
+| [pytest-dev/pytest#15058](https://github.com/pytest-dev/pytest/pull/15058) | R2 | `ABSENT` | `NOT_APPLICABLE` | wrong |
+| [pytest-dev/pytest#14934](https://github.com/pytest-dev/pytest/pull/14934) | R2 | `ABSENT` | `PRESENT` | wrong |
+| [astral-sh/ruff#29026](https://github.com/astral-sh/ruff/pull/29026) | R1 | `ABSENT` | `PRESENT` | wrong |
+| [astral-sh/ruff#29026](https://github.com/astral-sh/ruff/pull/29026) | R2 | `ABSENT` | `PRESENT` | wrong |
+| [astral-sh/ruff#29018](https://github.com/astral-sh/ruff/pull/29018) | R1 | `ABSENT` | `PRESENT` | wrong |
+| [astral-sh/ruff#29018](https://github.com/astral-sh/ruff/pull/29018) | R2 | `ABSENT` | `PRESENT` | wrong |
+| [astral-sh/ruff#29015](https://github.com/astral-sh/ruff/pull/29015) | R2 | `ABSENT` | `PRESENT` | wrong |
+| [astral-sh/ruff#29014](https://github.com/astral-sh/ruff/pull/29014) | R2 | `ABSENT` | `PRESENT` | wrong |
+| [astral-sh/ruff#28999](https://github.com/astral-sh/ruff/pull/28999) | R1 | `ABSENT` | `PRESENT` | wrong |
+| [astral-sh/ruff#28999](https://github.com/astral-sh/ruff/pull/28999) | R2 | `ABSENT` | `PRESENT` | wrong |
+| [astral-sh/ruff#28981](https://github.com/astral-sh/ruff/pull/28981) | R1 | `ABSENT` | `PRESENT` | wrong |
+| [astral-sh/ruff#28981](https://github.com/astral-sh/ruff/pull/28981) | R2 | `ABSENT` | `PRESENT` | wrong |
+| [astral-sh/ruff#28923](https://github.com/astral-sh/ruff/pull/28923) | R2 | `ABSENT` | `PRESENT` | wrong |
+| [astral-sh/ruff#28921](https://github.com/astral-sh/ruff/pull/28921) | R2 | `ABSENT` | `PRESENT` | wrong |
+| [tokio-rs/tokio#8505](https://github.com/tokio-rs/tokio/pull/8505) | R2 | `ABSENT` | `PRESENT` | wrong |
+| [tokio-rs/tokio#8496](https://github.com/tokio-rs/tokio/pull/8496) | R2 | `ABSENT` | `PRESENT` | wrong |
+| [vitejs/vite#23513](https://github.com/vitejs/vite/pull/23513) | R1 | `ABSENT` | `PRESENT` | correct |
+| [cli/cli#14191](https://github.com/cli/cli/pull/14191) | R1 | `ABSENT` | `PRESENT` | wrong |
+
+### A. Comment rate
+
+90 of 200 pull requests (45.0%) would have received a comment.
+
+### B. Per-rule rate
+
+| Rule | `ABSENT` | `PRESENT` | Rate | `NOT_APPLICABLE` | `UNKNOWN` |
+| --- | --- | --- | --- | --- | --- |
+| R1 | 70 | 130 | 35.0% | 0 | 0 |
+| R2 | 31 | 90 | 25.6% | 79 | 0 |
+| R3 | 0 | 162 | 0.0% | 38 | 0 |
+
+### C. Factual error rate
+
+0 of 101 `ABSENT` signals are wrong (0.0%).
+The criterion is at most 5%: **met**.
+
+| Rule | `ABSENT` checked | Wrong | Rate |
+| --- | --- | --- | --- |
+| R1 | 70 | 0 | 0.0% |
+| R2 | 31 | 0 | 0.0% |
+| R3 | 0 | 0 | n/a |
+
+### By repository
+
+| Repository | Pull requests with a comment | `ABSENT` signals | Wrong |
+| --- | --- | --- | --- |
+| pytest-dev/pytest | 2 | 2 | 0 |
+| pandas-dev/pandas | 3 | 3 | 0 |
+| astral-sh/ruff | 12 | 13 | 0 |
+| tokio-rs/tokio | 10 | 12 | 0 |
+| vitejs/vite | 7 | 8 | 0 |
+| withastro/astro | 10 | 10 | 0 |
+| prometheus/prometheus | 11 | 12 | 0 |
+| cli/cli | 8 | 9 | 0 |
+| neovim/neovim | 9 | 12 | 0 |
+| godotengine/godot | 18 | 20 | 0 |
+
+### Wrong signals
+
+No `ABSENT` signal was labelled wrong.
