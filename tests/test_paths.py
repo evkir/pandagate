@@ -35,6 +35,8 @@ def test_source_files_are_logic(path: str) -> None:
         "crates/ty_python_semantic/resources/mdtest/call/function.md",
         "pkg/render/snapshots/page.html",
         "web/__snapshots__/button.html",
+        "crates/demo/src/testing.rs",
+        "ui/Button.snap",
     ],
 )
 def test_test_material_is_test(path: str) -> None:
@@ -77,6 +79,12 @@ def test_a_directory_merely_containing_test_is_not_test_material() -> None:
 
 def test_a_name_merely_starting_with_test_as_a_word_is_not_a_test() -> None:
     assert classify("src/testament.py") is PathKind.LOGIC
+
+
+def test_a_testing_name_is_test_support_only_for_source_files() -> None:
+    assert classify("guide/testing.md") is PathKind.DOCS
+    assert classify("src/testing") is PathKind.OTHER
+    assert classify("src/testing_utils.py") is PathKind.LOGIC
 
 
 def test_classification_is_case_insensitive() -> None:
