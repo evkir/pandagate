@@ -243,7 +243,7 @@ def test_describe_file_shows_markers_and_hunks_of_logic() -> None:
 
 def test_describe_file_without_a_patch() -> None:
     assert describe_file(FILES[1][1]) == [
-        "- docs  +3 -0 crates/demo/resources/mdtest/case.md (added)",
+        "- test  +3 -0 crates/demo/resources/mdtest/case.md (added)",
         "    path hint: mdtest",
         "    no patch in the API response",
     ]
@@ -288,7 +288,7 @@ def test_entry_for_r2_lists_kinds_and_files() -> None:
     entry = render_entry(2, (FIRST, "R2"), "R2 observed", PULLS[1], FILES[1], {})
     lines = entry.splitlines()
     assert lines[0] == "=== 002 R2 octo/demo#1 ==="
-    assert lines[5:8] == ["kinds: logic x1, docs x1", "files:", "- logic +6 -1 src/parser.rs"]
+    assert lines[5:8] == ["kinds: logic x1, test x1", "files:", "- logic +6 -1 src/parser.rs"]
     assert "description:" not in lines
 
 

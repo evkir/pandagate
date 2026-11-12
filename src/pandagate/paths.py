@@ -56,7 +56,20 @@ META_EXTENSIONS = frozenset(
     {".toml", ".ini", ".cfg", ".yml", ".yaml", ".json", ".lock", ".editorconfig"}
 )
 
-TEST_PATH_MARKERS = frozenset({"test", "tests", "spec", "specs", "__tests__", "testdata"})
+TEST_PATH_MARKERS = frozenset(
+    {
+        "test",
+        "tests",
+        "testing",
+        "spec",
+        "specs",
+        "__tests__",
+        "testdata",
+        "mdtest",
+        "snapshots",
+        "__snapshots__",
+    }
+)
 DOCS_PATH_MARKERS = frozenset({"doc", "docs", "documentation", "man"})
 META_PATH_MARKERS = frozenset({".github", ".gitlab", ".circleci", ".idea", ".vscode"})
 
