@@ -178,6 +178,46 @@ min_logic_lines = 0
 
 An invalid configuration file fails the job and posts nothing.
 
+## Benchmark
+
+PandaGate was run on 200 pull requests that maintainers merged: the 20
+most recent ones from outside contributors, created before 2026-10-01,
+in each of pytest, pandas, ruff, tokio, vite, astro, prometheus,
+GitHub CLI, neovim and godot. The
+[protocol](benchmarks/README.md) was committed before the first run, and
+every run is published as it came out in
+[benchmarks/RESULTS.md](benchmarks/RESULTS.md).
+
+Two things were measured: how often PandaGate would have commented, and
+how often the fact it stated was wrong. For the second, every signal
+that carried a question was checked by hand against the pull request.
+
+| Run | Would have commented | Stated fact was wrong |
+|---|---|---|
+| 1. First version of the rules | 100 of 200 (50.0%) | 17 of 119 (14.3%) |
+| 2. After fixing the wrong facts | 90 of 200 (45.0%) | 0 of 101 |
+| 3. With the 5 line threshold on `R1`, the current default | 50 of 200 (25.0%) | 0 of 61 |
+
+What these numbers do and do not show:
+
+- **The rules were tuned on this sample.** The fixes after run 1 were
+  made by looking at its 17 errors, and the threshold was chosen by
+  looking at where run 2 asked its questions. So 0 of 61 and 25% are
+  results on pull requests the rules have already seen. Performance on
+  unseen pull requests has not been measured; that needs a fresh sample.
+- **The drop from 45% to 25% comes from asking less, not from being more
+  accurate.** Run 3 no longer asks 40 questions that were checked and
+  found correct in run 2. Each of them is listed in the results.
+- **Every pull request in the sample was merged.** The comment rate is
+  how often PandaGate speaks up on work that maintainers accepted. How
+  many low-effort pull requests it would catch has not been measured.
+- **`R3` never asked.** It applied to 162 pull requests and found none
+  spread over more than 3 areas.
+- **The rate depends on the project.** In run 3 it ranges from 0 of 20
+  in pytest to 13 of 20 in godot, where engine changes are routinely
+  merged without a test in the same pull request. For a project like
+  that, turn `R2` off as shown above.
+
 ## What it does not do
 
 - It does not classify authorship. There is no "written by AI" verdict,
