@@ -43,6 +43,46 @@ PandaGate comments only when it has at least one question. It keeps a
 single comment per pull request, edits that comment in place when the
 pull request changes, and deletes it once there is nothing left to ask.
 
+## What it reports
+
+Three rules. Each one states a fact, and asks a question only when the
+fact is missing.
+
+| Rule | Fact | Asks when |
+|---|---|---|
+| `R1` Linked issue | Does the title or body reference an issue? | The author is not a maintainer, at least 5 lines of logic changed, and there is no reference. |
+| `R2` Tests alongside logic | Did test files change together with logic? | At least 5 lines of logic changed and no test changed. |
+| `R3` Diff cohesion | How many areas of the tree does the logic change touch? | Logic changed in more than 3 areas. |
+
+**Logic** means source code outside test paths. Documentation,
+manifests, lock files and CI configuration are not logic. Changed lines
+are additions plus deletions; a file that was only renamed counts as
+zero.
+
+**R1** reads the title and the body. `#12`, `GH-12`, `owner/repo#12` and
+issue or pull request URLs all count as a reference. Text inside code
+spans and fenced code blocks is ignored, so a `fixes #123` left over
+from a pull request template does not count. Authors whose association
+with the repository is owner, member or collaborator are not asked.
+
+**R2** applies to every author, maintainers included. A test file is
+recognised by its path: directories such as `tests/`, `spec/` or
+`__tests__/`, and names such as `test_x.py`, `x_test.go`, `x.test.ts` or
+`x.spec.js`. In Rust, a test added inside a source file counts too.
+
+**R3** applies to every author and has no size threshold. An area is the
+first two directories of a path, for example `src/demo`; files in the
+repository root form one area.
+
+Each rule ends in one of four outcomes: present, absent, not applicable
+or unknown. Only absent carries a question. Unknown means PandaGate
+could not see enough to state the fact, for example when GitHub returns
+an incomplete file list for a very large pull request. It says so
+instead of guessing.
+
+The identifiers `R1`, `R2` and `R3` are stable. The configuration file
+refers to rules by them.
+
 ## What it does not do
 
 - It does not classify authorship. There is no "written by AI" verdict,
