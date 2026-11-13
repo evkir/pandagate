@@ -1,4 +1,4 @@
-name: PandaGate
+name: PandaGate PR Facts
 description: Reports observable facts about an incoming pull request and asks the maintainer's questions in one comment.
 author: evkir
 branding:
