@@ -1,6 +1,7 @@
 # PandaGate
 
 [![CI](https://github.com/evkir/pandagate/actions/workflows/ci.yml/badge.svg)](https://github.com/evkir/pandagate/actions/workflows/ci.yml)
+[![Marketplace](https://img.shields.io/badge/Marketplace-PandaGate%20PR%20Facts-2ea44f?logo=github)](https://github.com/marketplace/actions/pandagate-pr-facts)
 
 One comment on an incoming pull request: what can be observed about it,
 and the questions a maintainer would ask anyway.
