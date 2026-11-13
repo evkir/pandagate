@@ -218,6 +218,44 @@ What these numbers do and do not show:
   merged without a test in the same pull request. For a project like
   that, turn `R2` off as shown above.
 
+## Known limitations
+
+PandaGate reads the pull request's title, body and file list. It does
+not read the issue tracker or understand the code. That keeps it fast
+and safe, and it has a price:
+
+- **References are not verified.** `Refs #7` counts even if issue 7 does
+  not exist, and a link to another pull request counts like a link to an
+  issue.
+- **`word/word#3` in prose reads as a reference** to the repository
+  `word/word`, for example `docs/page#3`.
+- **A docstring or comment edit in a source file is a logic change.**
+  The file list gives line counts, not meaning, so `R2` can ask for a
+  test on a change that only reworded a comment.
+- **Shell scripts are logic.** A change to a `.sh` file gets the test
+  question like any other source file.
+- **`snapshots/` and `testing/` directories always count as tests**, so
+  a change there satisfies `R2` whatever the files contain.
+- **Tests inside source files are recognised only in Rust.** Python
+  doctests and in-file tests in Zig or D are not seen, and `R2` will
+  ask. In Rust, editing an existing test without touching its `#[test]`
+  line is not seen either.
+- **Vendored source code is logic.** Manifest and lock file updates are
+  ignored, but a dependency update that commits source files, such as
+  Go's `vendor/` directory, will be asked both questions.
+- **Below the threshold `R1` is silent.** A four line change to logic
+  with no issue behind it gets no question unless you lower
+  `min_logic_lines`.
+
+How it was checked live: installed from another repository by commit
+SHA, on a pull request from a fork, on an edited description and on a
+Dependabot pull request, all in the test repository
+[evkir/pandagate-live](https://github.com/evkir/pandagate-live). Those
+pull requests were opened by the repository owner, with a configuration
+that treats the owner as an outside author. How PandaGate reads the
+association of real outside authors is covered by the benchmark, not by
+a live pull request from a stranger.
+
 ## What it does not do
 
 - It does not classify authorship. There is no "written by AI" verdict,
