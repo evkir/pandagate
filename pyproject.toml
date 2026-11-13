@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pandagate"
-version = "0.0.1"
-description = "Gate incoming pull requests on contribution evidence - tests, repro steps, issue linkage."
+version = "0.1.0"
+description = "One comment on an incoming pull request: observable facts and the maintainer's questions. No authorship verdicts."
 readme = "README.md"
 requires-python = ">=3.12"
 license = "Apache-2.0"
