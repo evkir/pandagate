@@ -4,7 +4,7 @@ import pandagate
 
 
 def test_version_is_exposed() -> None:
-    assert pandagate.__version__ == "0.0.1"
+    assert pandagate.__version__ == "0.1.0"
 
 
 def test_rules_package_importable() -> None:
