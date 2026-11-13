@@ -1,4 +1,4 @@
-"""PandaGate - contribution evidence gate for pull requests.
+"""PandaGate - one comment of observable facts and questions on a pull request.
 
 PandaGate reports observable properties of a pull request. It does not
 infer or assert how the pull request was authored.
