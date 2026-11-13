@@ -26,6 +26,11 @@ a single comment.
 This is the comment PandaGate left on a pull request opened from a fork,
 [evkir/pandagate-live#2](https://github.com/evkir/pandagate-live/pull/2):
 
+![The PandaGate comment on evkir/pandagate-live#2: three observed facts, two of them followed by a question](docs/comment.png)
+
+<details>
+<summary>The same comment as text</summary>
+
 > ### Observations on this pull request
 >
 > - **Linked issue** (` R1 `): ` no issue reference in the title or body `
@@ -35,6 +40,8 @@ This is the comment PandaGate left on a pull request opened from a fork,
 > - **Diff cohesion** (` R3 `): ` 1 area(s) of logic touched: src/demo `
 >
 > <sub>[PandaGate](https://github.com/evkir/pandagate) reports what it can observe and changes nothing about this pull request. Rules are set in ` .pandagate.toml ` on the base branch.</sub>
+
+</details>
 
 Every fact is listed. A fact that is missing carries one question under
 it; a fact that is present carries none.
