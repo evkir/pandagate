@@ -43,6 +43,48 @@ PandaGate comments only when it has at least one question. It keeps a
 single comment per pull request, edits that comment in place when the
 pull request changes, and deletes it once there is nothing left to ask.
 
+## Install
+
+Add one file, `.github/workflows/pandagate.yml`, to the default branch:
+
+```yaml
+name: PandaGate
+
+on:
+  pull_request_target:
+    types: [opened, edited, synchronize, reopened]
+
+permissions: {}
+
+concurrency:
+  group: pandagate-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  report:
+    name: Report on the pull request
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      # No checkout: the pull request's code is never fetched or run.
+      - uses: evkir/pandagate@v0.1.0
+```
+
+That is the whole installation. The action needs `python3` 3.12 or newer
+on the runner, which `ubuntu-latest` provides, and installs nothing.
+
+To pin the action to a commit instead of a tag, replace `v0.1.0` with
+the full commit SHA shown on the
+[releases page](https://github.com/evkir/pandagate/releases).
+
+The workflow uses `pull_request_target` so that pull requests from forks
+get a token that is allowed to comment. That trigger is dangerous when a
+workflow checks out and runs the fork's code. This one has no checkout
+step, and the action reads the pull request only through the GitHub API.
+
 ## What it reports
 
 Three rules. Each one states a fact, and asks a question only when the
@@ -82,6 +124,59 @@ instead of guessing.
 
 The identifiers `R1`, `R2` and `R3` are stable. The configuration file
 refers to rules by them.
+
+## Configuration
+
+Configuration is optional. Without a file the defaults below apply. To
+change them, add `.pandagate.toml` to the root of the repository. The
+file is read from the base branch, never from the pull request, so a
+contributor cannot switch the rules off in their own pull request.
+
+All keys with their default values:
+
+```toml
+mode = "warn"
+enabled_rules = ["R1", "R2", "R3"]
+
+[rules.R1]
+min_logic_lines = 5
+require_closing_keyword = false
+maintainer_associations = ["OWNER", "MEMBER", "COLLABORATOR"]
+
+[rules.R2]
+min_logic_lines = 5
+
+[rules.R3]
+max_areas = 3
+area_depth = 2
+```
+
+- `mode`: `warn` posts the comment, `off` posts nothing.
+- `enabled_rules`: the rules that run.
+- `min_logic_lines`: the rule stays silent below this many changed lines
+  of logic.
+- `require_closing_keyword`: when `true`, only a reference behind a
+  closing keyword, such as `Fixes #12`, counts for `R1`.
+- `maintainer_associations`: authors with one of these associations are
+  not asked for an issue. An empty list means everyone is asked.
+- `max_areas`: `R3` asks above this many areas.
+- `area_depth`: how many leading directories make an area.
+
+A project that does not keep tests next to the code will get the test
+question on most pull requests. Turn that rule off:
+
+```toml
+enabled_rules = ["R1", "R3"]
+```
+
+To ask for an issue on every change to logic, however small:
+
+```toml
+[rules.R1]
+min_logic_lines = 0
+```
+
+An invalid configuration file fails the job and posts nothing.
 
 ## What it does not do
 
